@@ -1,0 +1,89 @@
+/*
+3 - Buttons
+*/
+
+.btn{
+    font-weight: 400;
+    padding: 8px 14px;
+    font-size:14px;
+    transition:all 0.3s;
+    -webkit-transition:all 0.3s;
+     text-transform:uppercase;
+    &.btn-lg{
+        padding: 14px 30px 14px;
+    }
+    &.btn-rounded{
+        border-radius: 100px;
+        -webkit-border-radius: 100px;
+    }
+    i{
+        margin-right: 5px;
+    }
+    &:focus{
+        outline: 0!important;
+    }
+}
+.btn-dark{
+    background: $dark-color;
+    color: #fff;
+    border-color: $dark-color;
+    &:hover{
+        box-shadow: 0px 3px 6px rgba(0,0,0,0.2);
+        color: #fff;
+    }
+    &:focus{
+        background: $dark-color;
+    color: #fff;
+    border-color: $dark-color;
+    }
+}
+.btn-danger{
+    background: $danger-color;
+    color: #fff;
+    border-color: $danger-color;
+    &:hover{
+        box-shadow: 0px 3px 6px rgba(0,0,0,0.2);
+        color: #fff;
+    }
+    &:focus{
+        background: $danger-color;
+    color: #fff;
+    border-color: $danger-color;
+    }
+}
+.btn-primary{
+    background: $primary-color;
+    color: #fff;
+    border-color: $primary-color;
+    &:hover{
+        box-shadow: 0px 3px 6px rgba(0,0,0,0.2);
+        color: #fff;
+        background: $primary-color;
+    }
+    &:focus{
+        background: $primary-color;
+    color: #fff;
+    border-color: $primary-color;
+    }
+}
+.btn-white-border{
+    color: #fff;
+    border: 1px solid #fff;
+    &:hover{
+        background: #fff;
+        color: #333;
+    }
+    &:focus{
+       color: #fff;
+    border: 2px solid #fff;
+    background: transparent;
+    }
+}
+.buttons{
+    a{
+        margin: 4px;
+        &.btn-dark{
+            margin-left: 0px;
+        }
+    }
+}

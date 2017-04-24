@@ -1,0 +1,209 @@
+/*
+1 - Template basics
+*/
+html,body{
+    height: 100%;
+}
+body{
+    background: #fff;
+    font-size: 15px;
+    line-height: 26px;
+    color: #888;
+    font-family: $base-font;
+    font-weight: 400;
+}
+a{
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    color: $primary-color;
+    &.link-underline{
+        color: $primary-color;
+        border-bottom: 1px solid $primary-color;
+        padding-bottom: 3px;
+        &:hover{
+            color: #999;
+        }
+    }
+    &:hover,&:focus{
+        outline: 0!important;
+        text-decoration: none;
+    }
+}
+h1,h2,h3,h4,h5,h6{
+    margin-top: 0px;
+    font-weight: 400;
+    color: #333;
+}
+.h4, h4 {
+    font-size: 1.3rem;
+}
+strong,b,label{
+    font-weight: 500;
+}
+button,input[type="submit"]{
+    &:focus{
+        outline: 0!important;
+    }
+}
+.full-height{
+    height: 100%;
+}
+.overflow-hide{
+    overflow: hidden;
+}
+.display-table{
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+.verticle-center{
+   width: 100%;
+   display: table-cell;
+   vertical-align: middle;
+}
+.lead{
+    font-weight: 300;
+}
+.font300{
+    font-weight: 300!important;
+}
+.font800{
+    font-weight: 800!important;
+}
+.font700{
+    font-weight: 700!important;
+}
+.bg-primary{
+    background: $primary-color!important;
+}
+.bg-danger{
+    background: $danger-color!important;
+}
+.bg-dark{
+    background: $dark-color!important;
+}
+.text-primary{
+    color: $primary-color!important;
+}
+.text-danger{
+    color: $danger-color!important;
+}
+.text-warning{
+    color: $warning-color!important;
+}
+.mt0{
+    margin-top:0px!important;
+}
+.mt10{
+    margin-top: 10px!important;
+}
+.mt20{
+    margin-top: 20px!important;
+}
+.mt30{
+    margin-top: 30px!important;
+}
+.mt40{
+    margin-top: 40px!important;
+}
+.mt50{
+    margin-top: 50px!important;
+}
+.mb0{
+    margin-bottom: 0px!important;
+}
+.mb10{
+    margin-bottom: 10px!important;
+}
+.mb20{
+    margin-bottom: 20px!important;
+}
+.mb30{
+    margin-bottom: 30px!important;
+}
+.mb40{
+    margin-bottom: 40px!important;
+}
+.mb50{
+    margin-bottom: 50px!important;
+}
+.mb60{
+    margin-bottom: 60px!important;
+}
+.mb70{
+    margin-bottom: 70px!important;
+}
+.mb80{
+    margin-bottom:80px!important;
+}
+.pt70{
+    padding-top: 70px!important;
+}
+.pt50{
+    padding-top: 50px!important;
+}
+.pt90{
+    padding-top: 90px!important;
+}
+.pt30{
+    padding-top: 30px!important;
+}
+.pb50{
+    padding-bottom: 50px!important;
+}
+.pb70{
+    padding-bottom: 70px!important;
+}
+.pb90{
+    padding-bottom: 90px!important;
+}
+.pb40{
+    padding-bottom: 40px!important;
+}
+.gray-bg{
+        background: #f6f8f9!important;
+}
+.primary-bg{
+        background: $primary-color!important;
+}
+.danger-bg{
+        background: $danger-color!important;
+}
+.features-list{
+    padding-left:20px;
+    li{
+        list-style:  circle;
+        padding-top: 6px;
+    }
+}
+.page-banner{
+    padding-top: 150px;
+    padding-bottom: 30px;
+    background: $primary-color;
+    h3{
+        color:#fff;
+    }
+}
+.form-control,input[type="text"],input[type="email"],select,textarea{
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    min-height: 40px;
+    
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    font-family: $base-font;
+}
+@media(min-width:768px){
+    .v-align-children {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+}
+}

@@ -1,0 +1,101 @@
+/*
+Author  -  design_mylife
+Project -  Intro Multipurpose landing page
+*/
+
+/***************************************
+1- Basic
+2- Navbar  
+3- buttons
+4- hero
+5- icon boxes
+6- pricing tables
+7- Owl carousel css
+8- Call to actions
+9- Modals
+10- Footer
+11- Responsive
+****************************************/
+
+/*elegant font import*/
+@font-face {
+    font-family: 'ElegantIcons';
+    src: url("../elegant_font/fonts/ElegantIcons.eot");
+    src: url("../elegant_font/fonts/ElegantIcons.eot?#iefix") format('embedded-opentype'),
+        url("../elegant_font/fonts/ElegantIcons.woff") format('woff'),
+        url("../elegant_font/fonts/ElegantIcons.ttf") format('truetype'),
+        url("../elegant_font/fonts/ElegantIcons.svg#ElegantIcons") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700');
+@import "_variables.scss";
+@import "_base.scss";
+@import "_navbar.scss";
+@import "_buttons.scss";
+@import "_hero.scss";
+@import "_icon-box.scss";
+@import "_price-box.scss";
+@import "_owl-carousel.scss";
+@import "_cta.scss";
+@import "_modal.scss";
+@import "_footer.scss";
+
+
+
+
+/** 11 - responsive css **/
+@media(max-width:767px){
+    .navbar-toggler{
+        border: 0px!important;
+    }
+    .navbar-inverse{
+        &.transparent-nav{
+            padding: 5px 0;
+            &.bg-inverse{
+                    background-color: #292b2c!important;
+                    padding: 5px 0;
+            }
+        }
+    }
+    .hero-form{
+        padding-top: 100px;
+        h1{
+            padding-top: 0px;
+        }
+    }
+    #features .col-sm-6.mt50{
+        margin-top: 0px!important;
+    }
+    #feature2.pt90{
+        padding-top: 60px!important;
+    }
+   
+    .hero-image {
+        padding-top: 120px;
+    }
+    .full-height h1 {
+        color: #fff;
+        font-size: 30px;
+        line-height: 34px;
+    }
+    .full-height{
+        margin-top: 40px;
+    }
+}
+@media(max-width:576px){
+     .footer{
+        text-align: center;
+        .text-right{
+            text-align: center!important;
+        }
+        .f-social{
+            padding-top: 20px;
+        }
+    }
+    .navbar-toggleable-sm>.container{
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}

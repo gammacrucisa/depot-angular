@@ -1,0 +1,32 @@
+/*
+2 - navbar style
+*/
+.navbar-inverse{
+    &.transparent-nav{
+        padding: 10px 0;
+        &.bg-inverse{
+            background: transparent!important;
+            transition:all 0.3s;
+            &.shrink{
+                background-color: #292b2c!important;
+                padding: 5px 0;
+            }
+        }
+    }
+}
+.navbar-nav .nav-link
+{
+        font-weight: 300;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+@media (min-width: 768px){
+.navbar-toggleable-sm .navbar-nav .nav-link {
+    padding-right: .8rem;
+    padding-left: .8rem;
+}
+}
+.dropdown-menu .dropdown-item{
+    font-weight: 300;
+    font-size: .9rem;
+}

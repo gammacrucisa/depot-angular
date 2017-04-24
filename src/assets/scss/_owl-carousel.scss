@@ -1,0 +1,31 @@
+/*
+7 - Owl carousel
+*/
+.owl-testimonials{
+    p{
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 32px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    img{
+        max-width: 100px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+}
+.clients-row{
+    a{
+        opacity: 0.5;
+        display: block;
+        &:hover{
+            opacity: 1;
+        }
+    }
+     img {
+    display: block;
+    margin: 40px auto;
+    width: 150px;
+}
+}

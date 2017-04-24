@@ -1,0 +1,46 @@
+/*
+6 - Pricing Tables
+*/
+.pricing-box{
+    padding: 30px 20px;
+    background-color:#fff;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    h1{
+        font-size:44px;
+        margin-bottom:20px;
+        span{
+            font-size: 13px;
+            display:block;
+            color: #999;
+            margin-top: 5px;
+        }
+    }
+    ul{
+        padding-bottom: 25px;
+        text-align:left;
+        li{
+            padding: 6px 0;
+            border-top: 1px dashed #eee;
+        }
+    }
+    &.danger{
+        border-top: 10px solid $danger-color;
+        h1{
+            color: $danger-color;
+        }
+    }
+     &.primary{
+        border-top: 10px solid $primary-color;
+         h1{
+            color: $primary-color;
+        }
+    }
+      &.dark{
+        border-top: 10px solid $dark-color;
+         h1{
+            color: $dark-color;
+        }
+    }
+}
+
