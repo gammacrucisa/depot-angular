@@ -1,0 +1,76 @@
+<section id="pricing" class="pt90 pb50 bg-black-trans5 m100center">
+    <div class="container">
+        <div class="text-center center-title mb50">
+            <h2 class="text-capitalize text-center font300">Pricing Tables</h2>
+            <p>
+                Free 15 days trail. Cancel anytime
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <div class="row">
+                    <div class="col-lg-4 mb40" *ngFor="#person of staff">
+                        <div class="pricing-box danger">                            
+                            <h1 class="text-right">
+                                $100<span>Per Hour</span> 
+                            </h1>
+                            <h3>{{ patrickw.role }}</h3>
+                            <ul class="list-unstyled">
+                                <li>
+                                    {{ patrickw.first }}
+                                </li>
+                                <li>{{ patrickw.last }}</li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-lg btn-rounded btn-danger btn-block">Sign Up</a>
+                            </div>
+                        </div>
+                    </div><!--/price col-->
+                    <div class="col-lg-4 mb40">
+                        <div class="pricing-box primary">                            
+                            <h1 class="text-right">
+                                $29<span>Per Month</span> 
+                            </h1>
+                            <h3>Pro</h3>
+                            <ul class="list-unstyled">
+                                <li>
+                                    10 GB monthly bandwidth
+                                </li>
+                                <li>5 GB disk space</li>
+                                <li>20 Email-accounts</li>
+                                <li>10 Sub-domains</li>
+                                <li>Unlimited support</li>
+                            </ul>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-lg btn-rounded btn-primary btn-block">Sign Up</a>
+                            </div>
+                        </div>
+                    </div><!--/price col-->
+                    <div class="col-lg-4 mb40">
+                        <div class="pricing-box dark">                            
+                            <h1 class="text-right">
+                                $49<span>Per Month</span> 
+                            </h1>
+                            <h3>Business</h3>
+                            <ul class="list-unstyled">
+                                <li>
+                                    10 GB monthly bandwidth
+                                </li>
+                                <li>5 GB disk space</li>
+                                <li>20 Email-accounts</li>
+                                <li>10 Sub-domains</li>
+                                <li>Unlimited support</li>
+                            </ul>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-lg btn-rounded btn-dark btn-block">Sign Up</a>
+                            </div>
+                        </div>
+                    </div><!--/price col-->
+                </div><!--/row-->
+            </div><!--/offset col-->
+        </div><!--/row-->
+    </div><!--/container-->
+</section>

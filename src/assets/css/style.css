@@ -40,6 +40,8 @@ body {
     color: #fff;
     font-family: "Roboto", sans-serif;
     font-weight: 400; 
+    filter: blur(0px);
+    
 }
 
 a {
@@ -88,6 +90,9 @@ button:focus, input[type="submit"]:focus {
 
 .lead {
   font-weight: 300; }
+section {
+    
+}
 #home {
     
 }
