@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 interface Staff {
     id: number;
@@ -15,9 +15,10 @@ interface Staff {
 })
 
 
-export class StaffComponent {
-  title = 'Staff';
+export class StaffComponent implements OnInit {
   private staff: Staff[];
+
+  constructor() {}
 
   ngOnInit() {
     this.staff = [
