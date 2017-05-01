@@ -3,10 +3,21 @@
     background-color: rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(0, 0, 0, 0);
     display: inline-block;
+    color: white;
+    font-size: 20px;
+    text-align: center;
 }
 .form-control:focus {
     background-color: rgba(0, 0, 0, 0);
+    color: white;
 }
 input {
     display: inline;
 }
+#name {
+    width: 192px;
+}
+#email {
+    width: 256px;
+}
+form {}

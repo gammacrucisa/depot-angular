@@ -1,27 +1,32 @@
-<form method="post" action="#" class="intro-contact">
+<form method="post" action="#" class="intro-contact form-inline">
 <div class="row1">
-    <div class="col-sm-121"> 
+    <div class="col-sm-12"> 
         <div class="row1">
-            <div class="col-sm-121 mb20">Hello, my name is
-                <input type="text" name="name1" class="form-control" placeholder="Full Name...." />{{ fullName }}
+            <div class="col-sm-12 mb20">My name is
+                <input id="name" type="text" name="name1" class="form-control" placeholder="Full Name" />{{ fullName }} and, my email is
+                <input id="email" type="text" name="email" class="form-control" placeholder="Email Address" />
+                .
             </div>
-            <div class="col-sm-121 mb20">my email is
-                <input type="text" name="email" class="form-control" placeholder="Email Address...." />
+            <div class="col-sm-12 mb20">
             </div>
         </div>
     </div>
+<!--
     <div class="col-sm-121  mb20">
         <textarea name="message" class="form-control" rows="5" placeholder="Message...."></textarea>                                  
     </div>
+-->
 </div>
 <div class="row1 mb15">
     <div class="col-sm-12 text-center">
         <div class="data-status"></div> <!-- data submit status -->
     </div>
 </div>
+<!--
 <div class="row1">
     <div class="col-sm-12 text-right">
-        <button type="submit" name="submit" class="btn btn-primary btn-lg" (click)="refreshStaff()">Submit</button>
+        <button type="submit" name="submit" class="btn btn-primary btn-lg">Submit</button>
     </div>
 </div>
+-->
 </form>
