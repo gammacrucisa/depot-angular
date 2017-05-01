@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+.form-control {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0);
+    display: inline-block;
+}
+.form-control:focus {
+    background-color: rgba(0, 0, 0, 0);
+}
+input {
+    display: inline;
+}
