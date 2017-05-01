@@ -1,0 +1,23 @@
+[
+        {
+            "id": 0,
+            "first": "Patrick",
+            "last": "W",
+            "role": "Developerty747647657657657",
+            "bio": "In there like swimwear."
+        },
+        {
+            "id": 1,
+            "first": "Steve",
+            "last": "A",
+            "role": "Developer",
+            "bio": "Never fear."
+        },
+        {
+            "id": 2,
+            "first": "Gary",
+            "last": "P",
+            "role": "Artist",
+            "bio": "Make it a great day."
+        }
+]

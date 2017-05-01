@@ -9,6 +9,7 @@ import { HomeComponent } from './app.home.component';
 import { FooterComponent } from './app.footer.component';
 import { FormComponent } from './app.form.component';
 import { StaffComponent } from './app.staff.component';
+import { StaffService } from './app.staff.service';
 
 @NgModule({
   imports: [
@@ -24,7 +25,7 @@ import { StaffComponent } from './app.staff.component';
     FormComponent,
     StaffComponent
   ],
-  providers: [],
+  providers: [StaffService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
