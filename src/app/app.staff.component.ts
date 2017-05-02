@@ -17,26 +17,26 @@ export class StaffComponent implements OnInit {
     this.staff = [
         {
             "id": 0,
-            "first": "Patrick",
-            "last": "W",
-            "role": "Developer",
-            "bio": "In there like swimwear."
+            "first": "Fred",
+            "last": "Frankenstan",
+            "role": "Sales",
+            "bio": "Lorem ipsum dolor sit amet, movet complectitur usu cu, sed ex exerci blandit. Et sea clita noster discere, aeque delectus verterem ad eos. Munere quidam alterum at vix, solum percipit ullamcorper quo et, sed in utamur phaedrum. Tacimates scribentur liberavisse ne his."
         },
         {
             "id": 1,
             "first": "Steve",
-            "last": "A",
+            "last": "Stuvy",
             "role": "Developer",
-            "bio": "Never fear."
+            "bio": "Has equidem splendide at, id cum copiosae prodesset. Animal inermis oportere no vim, at perpetua voluptatum dissentias sea. Putent omittantur instructior ad cum. Mel an nulla postulant ocurreret, his suas adipisci consetetur id. Mel an sint cetero disputando, ubique scaevola expetenda ex qui. Atomorum tractatos vel ex."
         },
         {
             "id": 2,
             "first": "Gary",
-            "last": "P",
+            "last": "Grandlefuss",
             "role": "Artist",
-            "bio": "Make it a great day."
+            "bio": "Audire feugait ut nam, labore eligendi mel ne, sumo numquam sed eu. Dicant appetere adipiscing ne vel, ad vix torquatos philosophia. Cu nihil adipiscing mei, cu quod deleniti constituto vim, nibh decore facete cu eum. An mei adhuc munere offendit. Ut dicat voluptua per, eu ferri nemore persecuti eos."
         }
-]
+    ]
   };
 
   refreshStaff() {

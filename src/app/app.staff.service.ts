@@ -4,6 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 // import { Observable } from 'rxjs/Rx';
 
+
 export interface Staff {
     id: number;
     first: string;
@@ -14,7 +15,7 @@ export interface Staff {
 
 @Injectable()
 export class StaffService {
-
+    
     constructor (private http: Http) {}
 
     discoverStaff() {
