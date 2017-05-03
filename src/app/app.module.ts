@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { Angular2CarouselModule } from 'angular2carousel';
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './app.navbar.component';
@@ -15,7 +16,8 @@ import { StaffService } from './app.staff.service';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    Angular2CarouselModule
   ],
   declarations: [
     AppComponent,

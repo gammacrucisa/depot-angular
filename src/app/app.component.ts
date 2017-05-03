@@ -10,6 +10,17 @@ import { Component, Input } from '@angular/core';
 export class AppComponent {
   title = 'app works!';
 
+    images = [
+      {
+        img: '../assets/images/imac.png',
+        caption: 'KNH Yaki'
+      },
+      {
+        img: '../assets/images/imac2.png',
+        caption: '5000 trillion dollars'
+      }
+    ];
+
   @Input() form = {
     id: 1,
     first: 'Patrick',
