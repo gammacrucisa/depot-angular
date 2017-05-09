@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { Angular2CarouselModule } from 'angular2carousel';
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './app.navbar.component';
@@ -11,13 +10,14 @@ import { FooterComponent } from './app.footer.component';
 import { FormComponent } from './app.form.component';
 import { StaffComponent } from './app.staff.component';
 import { StaffService } from './app.staff.service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    Angular2CarouselModule
+    NgbModule.forRoot()
   ],
   declarations: [
     AppComponent,
@@ -25,7 +25,7 @@ import { StaffService } from './app.staff.service';
     HomeComponent,
     FooterComponent,
     FormComponent,
-    StaffComponent
+    StaffComponent,
   ],
   providers: [StaffService],
   bootstrap: [AppComponent]

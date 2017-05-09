@@ -1,9 +1,47 @@
-<section class="hero-form bg-black-trans5 mx-auto full-height" id="home">
+<section class="hero-form bg-black-trans5 full-height" id="home">
     <div class="display-table">
         <div class="verticle-center">
     <div class="container">
         <div class="row v-align-children">
-    <app-form></app-form>
+            
+
+            <ngb-carousel>
+              <ng-template ngbSlide>
+                <video poster="#" class="#" autoplay muted>
+                  <source src="../assets/video/future1.mp4" type="video/mp4">
+<!--                  <source src="movie.ogg" type="video/ogg">-->
+                    Your browser does not support the video tag.
+                </video>
+                <div class="carousel-caption">
+                  <h3>First slide label</h3>
+                  <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                </div>
+              </ng-template>
+              <ng-template ngbSlide>
+                <video poster="#" class="#" autoplay muted>
+                  <source src="../assets/video/future1.mp4" type="video/mp4">
+<!--                  <source src="movie.ogg" type="video/ogg">-->
+                    Your browser does not support the video tag.
+                </video>
+                <div class="carousel-caption">
+                  <h3>Second slide label</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+              </ng-template>
+              <ng-template ngbSlide>
+                <video poster="#" class="#" autoplay muted>
+                  <source src="../assets/video/future1.mp4" type="video/mp4">
+<!--                  <source src="movie.ogg" type="video/ogg">-->
+                    Your browser does not support the video tag.
+                </video>
+                <div class="carousel-caption">
+                  <h3>Third slide label</h3>
+                  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                </div>
+              </ng-template>
+            </ngb-carousel>
+            
+            <app-form></app-form>
             
         </div>
     </div>

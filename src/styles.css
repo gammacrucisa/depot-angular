@@ -25,3 +25,11 @@ form {}
     background-color: rgba(0, 0, 0, 0);
     color: black;
 }
+video {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+body {
+    overflow-x: hidden;
+}
