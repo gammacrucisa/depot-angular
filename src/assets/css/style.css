@@ -30,6 +30,7 @@ Project -  Intro Multipurpose landing page
 html, body {
   height: 100%; }
 
+/*
 body {
     background-image: url("../images/lanight2.png") !important;
     background-size: cover;
@@ -42,6 +43,19 @@ body {
     font-weight: 400; 
     filter: blur(0px);
     
+}
+*/
+body {
+    background: #006679;
+    background: -webkit-linear-gradient(to right, #a471a2, #006679);
+    background: linear-gradient(to right, #a471a2, #006679);
+    background-position: fixed;
+    background-attachment: fixed;
+    font-size: 15px;
+    line-height: 26px;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400; 
 }
 
 a {
@@ -95,6 +109,7 @@ section {
 }
 #home {
     font-size: 20px;
+    margin-bottom: 100px;
 }
 #about {
     margin-top: 100px !important;
@@ -153,8 +168,8 @@ section {
 .bg-black {
     background: rgba(0, 0, 0, 1) !important;
 }
-.bg-black-trans5 {
-    background: rgba(0, 0, 0, 0.5) !important;
+.bg-black-trans {
+    background: rgba(0, 0, 0, 0.2) !important;
 }
 
 .text-primary {

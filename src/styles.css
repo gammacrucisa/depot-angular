@@ -33,3 +33,7 @@ video {
 body {
     overflow-x: hidden;
 }
+.nichLogo {
+    display:block;
+    width: 80vw;
+}
