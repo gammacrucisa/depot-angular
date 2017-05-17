@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { trigger, state, animate, style, keyframes, transition } from '@angular/animations';
 
 @Component({
@@ -10,21 +10,22 @@ import { trigger, state, animate, style, keyframes, transition } from '@angular/
   background: linear-gradient(to right, #a471a2, #006679); 
 */
   animations: [
-    trigger('bgGradient', [
+    trigger('aboutFade', [
         state('start', style({
-            background: "linear-gradient(to right, #a471a2, #006679)"
+            backgroundColor: "rgba(0, 0, 0, 0)",
         })),
         state('finish', style({
-            background: "linear-gradient(to right, #a471a2, #006679)"
+            backgroundColor: "rgba(0, 0, 0, 0.1)",
         })),
-        transition('start <=> finish', animate('5000ms ease-in'))
+        transition('start => finish', animate('4000ms ease')),
+        transition('finish => start', animate('4000ms ease')),
     ])
   ]
 })
 
 
-export class AppComponent {
-  title = 'app works!';
+export class AppComponent implements OnInit {
+    state: string = 'start';
 
     images = [
       {
@@ -36,6 +37,16 @@ export class AppComponent {
         caption: '5000 trillion dollars'
       }
     ];
+
+    ngOnInit() {
+        setTimeout(() => this.changeState(), 10);
+        console.log('hola');
+    }
+
+    changeState() {
+        console.log('hellllo');
+        this.state = (this.state === 'start') ? 'finish' : 'start';
+    }
 
   @Input() form = {
     id: 1,

@@ -17,7 +17,7 @@
 
 
 
-        <section id="about" class="pt90 pb90 bg-black-trans m100center">
+        <section id="about" class="pt90 pb90 m100center" [@aboutFade]="state" (click)="changeState()">
             <div class="full-height full-width">
             <div class="container">
                 <h2 class="text-capitalize text-center font100">What we do</h2>
@@ -70,14 +70,13 @@
         <section id="testimonials" class="pt90 pb50 bg-black-trans m100center">
             <div class="container">
                 <div class="text-center center-title mb50">
-                    <h2 class="text-capitalize text-center font100">Our Perspective &amp; Results 
-Is Why You Want To Work With Us</h2>
+                    <h2 class="text-capitalize text-center font100">Our Perspective &amp; Results Is Why You Want To Work With Us</h2>
                 </div>
                 <div class="row clients-row">
                     <div class="col-md-6 col-sm-4">
                         <a href="#"><img src="../assets/images/deck.png" alt="" class="img-fluid"></a>
                     </div>
-                    <div class="col-md-6 col-sm-4">
+                    <div class="col-md-6 col-sm-6">
                         <a href="#"><img src="../assets/images/Case-Study.png" alt="" class="img-fluid"></a>
                     </div>
                 </div>
@@ -96,7 +95,7 @@ Is Why You Want To Work With Us</h2>
                     <h2 class="text-capitalize text-center font100">Companies Our Talent Has Worked With</h2>
                 </div>
                 <div class="row clients-row">
-                    <div class="col-md-2 col-sm-4">
+                    <div class="col-md-3 col-sm-4">
                         <a href="#"><img src="../assets/images/AARP1-white.png" alt="" class="img-fluid"></a>
                     </div>
                     <div class="col-md-2 col-sm-4">
@@ -108,7 +107,7 @@ Is Why You Want To Work With Us</h2>
                     <div class="col-md-2 col-sm-4">
                         <a href="#"><img src="../assets/images/Betagig1-white.png" alt="" class="img-fluid"></a>
                     </div>
-                    <div class="col-md-2 col-sm-4">
+                    <div class="col-md-3 col-sm-4">
                         <a href="#"><img src="../assets/images/Nike1-white.png" alt="" class="img-fluid"></a>
                     </div>
                 </div>

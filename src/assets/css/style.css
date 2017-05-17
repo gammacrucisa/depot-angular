@@ -55,7 +55,7 @@ body {
 /*    background: linear-gradient(to right, #a471a2, #006679);*/
     background: linear-gradient(-45deg, #a471a2, #006679);
     background-size: 500% 500%;
-    animation: Gradient 25s ease infinite;
+    animation: Gradient 20s ease infinite;
     background-position: fixed;
     background-attachment: fixed;
     font-size: 15px;
