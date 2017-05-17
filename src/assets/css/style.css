@@ -505,7 +505,7 @@ section {
 */
 .pricing-box {
   padding: 30px 20px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
   -webkit-border-radius: 10px; }
   .pricing-box h1 {
