@@ -39,7 +39,7 @@ export class AppComponent implements OnInit {
     ];
 
     ngOnInit() {
-        setTimeout(() => this.changeState(), 10);
+        setTimeout(() => this.changeState(), 6000);
         console.log('hola');
     }
 
