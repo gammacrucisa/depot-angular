@@ -54,11 +54,11 @@ body {
 /*    background: -webkit-linear-gradient(to right, #a471a2, #006679);*/
 /*    background: linear-gradient(to right, #a471a2, #006679);*/
     background: linear-gradient(-45deg, #a471a2, #006679);
-    background-size: 500% 500%;
+    background-size: 300% 300%;
     animation: Gradient 20s ease infinite;
     background-position: fixed;
     background-attachment: fixed;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 26px;
     color: #fff;
     font-family: "Lato", sans-serif;
@@ -100,11 +100,11 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0px;
-  font-weight: 400;
+  font-weight: 300;
   color: #ddd; }
 
 .h4, h4 {
-  font-size: 1.3rem; }
+  font-size: 1.5rem; }
 
 strong, b, label {
   font-weight: 500; }
@@ -551,11 +551,16 @@ section {
   margin-bottom: 20px; }
 
 .clients-row a {
-  opacity: 0.5;
+  opacity: 0.6;
   display: block; }
   .clients-row a:hover {
     opacity: 1; }
-
+.dark-links a{
+  opacity: 0.6;
+}
+.dark-links a:hover {
+  opacity: 1;
+}
 .clients-row img {
   display: block;
   margin: 40px auto;

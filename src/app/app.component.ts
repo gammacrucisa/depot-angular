@@ -47,11 +47,4 @@ export class AppComponent implements OnInit {
         console.log('hellllo');
         this.state = (this.state === 'start') ? 'finish' : 'start';
     }
-
-  @Input() form = {
-    id: 1,
-    first: 'Patrick',
-    last: 'W',
-    role: 'Developer'
-  };
 }
