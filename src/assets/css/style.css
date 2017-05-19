@@ -46,7 +46,6 @@ body {
     font-family: "Roboto", sans-serif;
     font-weight: 400; 
     filter: blur(0px);
-    
 }
 */
 body {
@@ -54,7 +53,7 @@ body {
 /*    background: -webkit-linear-gradient(to right, #a471a2, #006679);*/
 /*    background: linear-gradient(to right, #a471a2, #006679);*/
     background: linear-gradient(-45deg, #a471a2, #006679);
-    background-size: 300% 300%;
+    background-size: 400% 400%;
     animation: Gradient 20s ease infinite;
     background-position: fixed;
     background-attachment: fixed;
@@ -71,14 +70,14 @@ body {
 
 @keyframes Gradient {
 	0% {
-		background-position: 0% 25%
+		background-position: 0% 50%
 	}
 	50% {
 		background-position: 100% 100%
 	}
     100% {
 /*        transform: translateX(-10%)*/
-        background-position: 0% 25%
+        background-position: 0% 50%
     }
 }
 
@@ -135,10 +134,9 @@ section {
 }
 #home {
     font-size: 20px;
-    margin-bottom: 100px;
 }
 #about {
-    margin-top: 100px !important;
+    margin-top: 0px !important;
 }
 
 .font100 {
@@ -198,10 +196,10 @@ section {
 
 
 .m100center {
-    width: 1200px;
+    width: 100%;
     margin-top: 0px;
     margin-right: auto;
-    margin-bottom: 100px;
+    margin-bottom: 0px;
     margin-left: auto;
 }
 

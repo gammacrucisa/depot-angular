@@ -1,23 +1,38 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Staff, StaffService } from './app.staff.service';
+import { trigger, state, style, transition, keyframes, animate } from '@angular/animations';
 
 @Component({
-  selector: 'app-staff',
-  templateUrl: './app.staff.component.html',
-  styleUrls: ['../assets/css/style.css']
+    selector: 'app-staff',
+    templateUrl: './app.staff.component.html',
+    styleUrls: ['../assets/css/style.css'],
+    animations: [
+        trigger('sectionBorder', [
+            state('inactive', style({
+                borderTop: "1px solid rgba(255, 255, 255, 0.0)",
+            })),
+            state('active', style({
+                borderTop: "1px solid rgba(255, 255, 255, 0.5)",
+            })),
+            transition('inactive => active', animate('4000ms ease')),
+            //transition('active => inactive', animate('4000ms ease')),
+        ])
+    ]
 })
 
 
-export class StaffComponent implements OnInit {
-  private staff: Staff[];
+export class StaffComponent {
+    
+    state: string = 'inactive';
 
-  constructor(private staffService: StaffService) {}
-
-  ngOnInit() { 
-    this.staff = [
+    changeState() {
+        this.state = (this.state === 'inactive') ? 'active' : 'inactive';  
+    };
+    
+    staff = [
         {
             "id": 0,
-            "first": "Fred",
+            "first": "Freddy",
             "last": "Frankenstan",
             "role": "Sales",
             "bio": "Lorem ipsum dolor sit amet, movet complectitur usu cu, sed ex exerci blandit. Et sea clita noster discere, aeque delectus verterem ad eos."
@@ -36,6 +51,5 @@ export class StaffComponent implements OnInit {
             "role": "Artist",
             "bio": "Audire feugait ut nam, labore eligendi mel ne, sumo numquam sed eu. Dicant appetere adipiscing ne vel, ad vix torquatos philosophia."
         }
-    ]
-  };
+    ];
 }
