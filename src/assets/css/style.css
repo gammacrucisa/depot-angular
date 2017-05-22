@@ -331,7 +331,10 @@ section {
     justify-content: center;
     -webkit-justify-content: center;
     flex-direction: row;
-    -webkit-flex-direction: row; } }
+    -webkit-flex-direction: row; 
+    z-index: 1;
+      position: absolute;
+    } }
 
 /*
 2 - navbar style

@@ -6,10 +6,20 @@
     color: white;
     font-size: 20px;
     text-align: center;
+
 }
 .form-control:focus {
     background-color: rgba(0, 0, 0, 0);
     color: white;
+    
+}
+app-form {
+    position: absolute;
+    top: 45vh;
+    left: 22vw;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 540px;
+    padding-top: 20px;
 }
 input {
     display: inline;
@@ -31,6 +41,7 @@ video {
 /*    overflow: hidden;*/
     object-fit: fill;
     z-index: -1;
+    position: relative;
 }
 body {
     overflow-x: hidden;
