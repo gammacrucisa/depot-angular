@@ -16,10 +16,15 @@
 app-form {
     position: absolute;
     top: 45vh;
-    left: 22vw;
+    left: calc(50vw - (550px / 2));
+    display: inline-block;
+    justify-content: center;
     background-color: rgba(0, 0, 0, 0.1);
-    width: 540px;
+    width: 550px;
     padding-top: 20px;
+}
+.app-form {
+    
 }
 input {
     display: inline;
