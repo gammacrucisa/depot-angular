@@ -28,7 +28,9 @@ form {}
 video {
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+/*    overflow: hidden;*/
+    object-fit: fill;
+    z-index: -1;
 }
 body {
     overflow-x: hidden;
@@ -40,5 +42,4 @@ body {
 .border-top {
     border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
-
 
