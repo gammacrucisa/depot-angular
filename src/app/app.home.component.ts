@@ -1,22 +1,25 @@
-import { Component } from '@angular/core';
-import { trigger, animate, style, keyframes} from '@angular/animations';
+import { Component, OnInit } from '@angular/core';
+import { trigger, animate, style, keyframes, transition } from '@angular/animations';
 
 @Component({
     selector: 'app-home',
     templateUrl: './app.home.component.html',
     styleUrls: ['../assets/css/style.css'],
     animations: [
-        trigger('aboutFade', [
-            animate("5s", keyframes([
-              style({ backgroundColor: "red", offset: 0 }),
-              style({ backgroundColor: "blue", offset: 0.2 }),
-              style({ backgroundColor: "orange", offset: 0.3 }),
-              style({ backgroundColor: "black", offset: 1 })
-            ]))
+        trigger('FormFade', [
+            transition('void => *', [
+                animate("6s", keyframes([
+                    style({ opacity: 0 }),
+                    style({ opacity: 1 }),
+                ]))
+            ])
+            
         ])
     ]
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
+    state: string = 'start';
+    
     words: {
         'contractor0': {
             'sales':'sales0','downloads': 'downloads0','leads': 'leads0' },
@@ -26,6 +29,10 @@ export class HomeComponent {
             'sales':'sales2','downloads': 'downloads2','leads': 'leads2' }
     };
 
+    ngOnInit() {
+        this.changeState();
+    }
+
     foobar() {
         for (let key in this.words){
             console.log(key);
@@ -34,5 +41,9 @@ export class HomeComponent {
             }//for
 
         }//for
+    }
+    
+    changeState() {
+        this.state = (this.state === 'start') ? 'finish' : 'start';
     }
 }
