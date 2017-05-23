@@ -2,25 +2,21 @@ import { Component, Input, OnInit } from '@angular/core';
 import { trigger, state, animate, style, keyframes, transition } from '@angular/animations';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['../assets/css/style.css'],
-/*     
-  background: -webkit-linear-gradient(to right, #a471a2, #006679);
-  background: linear-gradient(to right, #a471a2, #006679); 
-*/
-  animations: [
-    trigger('aboutFade', [
-        state('start', style({
-            backgroundColor: "rgba(0, 0, 0, 0)",
-        })),
-        state('finish', style({
-            backgroundColor: "rgba(0, 0, 0, 0.1)",
-        })),
-        transition('start => finish', animate('4000ms ease')),
-        transition('finish => start', animate('4000ms ease')),
-    ])
-  ]
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['../assets/css/style.css'],
+    animations: [
+        trigger('aboutFade', [
+            state('start', style({
+                backgroundColor: "rgba(0, 0, 0, 0)",
+            })),
+            state('finish', style({
+                backgroundColor: "rgba(0, 0, 0, 0.1)",
+            })),
+            transition('start => finish', animate('4000ms ease')),
+            transition('finish => start', animate('4000ms ease')),
+        ])
+    ]
 })
 
 
