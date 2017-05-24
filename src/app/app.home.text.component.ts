@@ -20,6 +20,9 @@ import { trigger, animate, style, keyframes, transition } from '@angular/animati
 export class HomeTextComponent implements OnInit {
     
     text: string = 'start';
+    
+    current1: string = 'You';
+    current2: string = 'Us';
 
     wordsArray: any = [
         {
@@ -49,7 +52,7 @@ export class HomeTextComponent implements OnInit {
 
     ];
     
-    words = {
+    words: any = {
         'contractor0': {
             'sales': 'sales0', 
             'downloads': 'downloads0', 
@@ -69,22 +72,31 @@ export class HomeTextComponent implements OnInit {
             'sales': 'sales3', 
             'downloads': 'downloads3', 
             'leads': 'leads3' 
-        },
+        }
     };
-    
-    current1: string = 'You';
-    current2: string = 'Us';
+
 
 
     ngOnInit() {
         this.foobaz();
-
+        
 //        this.foobar();
     }
 
     foobaz() {
         for (let i = 0; i < this.wordsArray.length; i = i + 1) {
-            
+            setInterval(() => {
+                this.current1 = Object.keys(this.wordsArray[i])[0];
+            }, 3000);            
+            this.iterateWordsObject(Object.keys(this.wordsArray[i]));
+        }
+    }
+    
+    iterateWordsObject(inputObject) {
+        for (let key of Object.keys(inputObject)) {
+            setInterval(() => {
+                this.current2 = inputObject[key];
+            }, 3000);
         }
     }
 
@@ -100,4 +112,5 @@ export class HomeTextComponent implements OnInit {
             }
         };
     }
+
 }
