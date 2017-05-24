@@ -24,31 +24,59 @@ export class HomeTextComponent implements OnInit {
     current1: string = 'You';
     current2: string = 'Us';
 
+    wordsArray1: any = [
+        {
+            'contractor0': [
+                'sales0', 
+                'downloads0', 
+                'leads0' 
+        ]},
+        {
+            'contractor1': [
+                'sales1', 
+                'downloads1', 
+                'leads1' 
+        ]},
+        {
+            'contractor2': [
+                'sales2', 
+                'downloads2', 
+                'leads2' 
+        ]},
+        {
+            'contractor3': [
+                'sales3', 
+                'downloads3', 
+                'leads3' 
+        ]}
+
+    ];
+    
     wordsArray: any = [
-        {
-            'contractor0': {
-                'sales': 'sales0', 
-                'downloads': 'downloads0', 
-                'leads': 'leads0' 
-        }},
-        {
-            'contractor1': {
-                'sales': 'sales1', 
-                'downloads': 'downloads1', 
-                'leads': 'leads1' 
-        }},
-        {
-            'contractor2': {
-                'sales': 'sales2', 
-                'downloads': 'downloads2', 
-                'leads': 'leads2' 
-        }},
-        {
-            'contractor3': {
-                'sales': 'sales3', 
-                'downloads': 'downloads3', 
-                'leads': 'leads3' 
-        }}
+        [
+            'contractor0', [
+                'sales0', 
+                'downloads0', 
+                'leads0' 
+        ]],
+        [
+            'contractor1', [
+                'sales1', 
+                'downloads1', 
+                'leads1' 
+        ]],
+        [
+            'contractor2', [
+                'sales2', 
+                'downloads2', 
+                'leads2' 
+        ]],
+        [
+            'contractor3', [
+                'sales3', 
+                'downloads3', 
+                'leads3' 
+        ]]
 
     ];
     
@@ -79,26 +107,19 @@ export class HomeTextComponent implements OnInit {
 
     ngOnInit() {
         this.foobaz();
-        
-//        this.foobar();
     }
 
     foobaz() {
         for (let i = 0; i < this.wordsArray.length; i = i + 1) {
-            setInterval(() => {
-                this.current1 = Object.keys(this.wordsArray[i])[0];
-            }, 3000);            
-            this.iterateWordsObject(Object.keys(this.wordsArray[i]));
+            this.current1 = this.wordsArray[i][0];
+            
+            for (let j = 0; j < this.wordsArray[i][1].length; j = j + 1) {
+                this.current2 = this.wordsArray[i][1][j];
+            }
+        
         }
-    }
+    };
     
-    iterateWordsObject(inputObject) {
-        for (let key of Object.keys(inputObject)) {
-            setInterval(() => {
-                this.current2 = inputObject[key];
-            }, 3000);
-        }
-    }
 
     foobar() { // for iterating a nested dictionary while listing the first dimension properties
         for (let key of Object.keys(this.words)) {
