@@ -36,8 +36,12 @@ input {
     width: 256px;
 }
 form {}
-.staff {
-    background-color: rgba(0, 0, 0, 0);
+app-staff {
+    background-image:url(assets/images/bg1.jpg);
+    background-position: center center;
+			background-repeat:  no-repeat;
+			background-attachment: fixed;
+			background-size:  cover;
     color: black;
 }
 video {

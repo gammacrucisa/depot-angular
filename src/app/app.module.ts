@@ -12,6 +12,11 @@ import { FooterComponent } from './app.footer.component';
 import { FormComponent } from './app.form.component';
 import { StaffComponent } from './app.staff.component';
 import { HomeTextComponent } from './app.home.text.component';
+import { ServicesComponent } from './app.services.component';
+import { DeckComponent } from './app.deck.component';
+import { AssociatesComponent } from './app.associates.component';
+import { FaqComponent } from './app.faq.component';
+import { InfoComponent } from './app.info.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -30,7 +35,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
         FooterComponent,
         FormComponent,
         StaffComponent,
-        HomeTextComponent
+        HomeTextComponent,
+        ServicesComponent,
+        DeckComponent,
+        AssociatesComponent,
+        FaqComponent,
+        InfoComponent
     ],
     providers: [],
     bootstrap: [AppComponent]

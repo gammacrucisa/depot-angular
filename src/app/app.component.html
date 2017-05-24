@@ -17,73 +17,7 @@
 
 
 
-        <section id="about" class="pt90 pb90" [@aboutFade]="state" (click)="changeState()">
-            <div class="full-height full-width">
-            <div class="container">
-                <h2 class="text-capitalize text-center font100">What we do  {{ state }}</h2>
-                <div class="row">
-                    <div class="col-md-8 offset-md-2 text-center">
-                        <p class="lead mb70"></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 col-lg-3 mb40">
-                        <div class="icon-box">
-                            <i class="icon_lightbulb_alt text-primary"></i>
-                            <h4>Paid Search Marketing</h4>
-                            <p></p>
-                        </div>
-                    </div><!--/column-->
-                    <div class="col-md-6 col-lg-3 mb40">
-                        <div class="icon-box">
-                            <i class="icon_gift_alt text-warning"></i>
-                            <h4>Facebook &amp; Social Advertising</h4>
-                            <p></p>
-                        </div>
-                    </div><!--/column-->
-                    <div class="col-md-6 col-lg-3 mb40">
-                        <div class="icon-box">
-                            <i class="social_twitter text-danger"></i>
-                            <h4>Web Development &amp; SEO</h4>
-                            <p></p>
-                        </div>
-                    </div><!--/column-->
-                    <div class="col-md-6 col-lg-3 mb40">
-                        <div class="icon-box">
-                            <i class="icon_chat_alt"></i>
-                            <h4>Branding &amp; Content Development</h4>
-                            <p></p>
-                        </div>
-                    </div><!--/column-->
-                </div><!--/row-->
-                <div class="row">
-                    <div class="col-md-8 offset-md-2 text-center">
-                        <p class="lead mb70"></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 col-lg-4 mb40">
-                        <div class="icon-box">
-                            <h3>27+ Years</h3>
-                            <p>COMBINED DIGTIAL EXPERIENCE</p>
-                        </div>
-                    </div><!--/column-->
-                    <div class="col-md-6 col-lg-4 mb40">
-                        <div class="icon-box">
-                            <h3>$80+ Million</h3>
-                            <p>IN AD DOLLARS MANAGED</p>
-                        </div>
-                    </div><!--/column-->
-                    <div class="col-md-6 col-lg-4 mb40">
-                        <div class="icon-box">
-                            <h3>$920 Million</h3>
-                            <p>IN REVENUE GENERATED</p>
-                        </div>
-                    </div><!--/column-->
-                </div><!--/row-->
-                
-            </div><!--/container--></div>
-        </section><!--/about-->
+        <app-services></app-services>
 
         
 
@@ -93,128 +27,23 @@
 
         <!--/staff-->
 
-        <hr class="mt0 mb0">
-        <section id="results" class="pt90 pb50 m100center dark-links">
-            <div class="container">
-                <div class="text-center center-title mb50">
-                    <h2 class="text-capitalize text-center font100">Our Perspective &amp; Results Is Why You Want To Work With Us</h2>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 col-sm-4">
-                        <a href="#"><img src="../assets/images/deck.png" alt="" class="img-fluid"></a>
-                    </div>
-                    <div class="col-md-6 col-sm-6">
-                        <a href="#"><img src="../assets/images/Case-Study.png" alt="" class="img-fluid"></a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <app-deck></app-deck>
 
 
 
 
 
         <!--/pricing-->
-        <hr class="mt0 mb0">
-        <section id="testimonials" class="pt90 pb50">
-            <div class="container">
-                <div class="text-center center-title mb50">
-                    <h2 class="text-capitalize text-center font100">Companies Our Talent Has Worked With</h2>
-                </div>
-                <div class="row clients-row">
-                    <div class="col-md-3 col-sm-4">
-                        <a href="#"><img src="../assets/images/AARP1-white.png" alt="" class="img-fluid"></a>
-                    </div>
-                    <div class="col-md-2 col-sm-4">
-                        <a href="#"><img src="../assets/images/Suzuki1-white.png" alt="" class="img-fluid"></a>
-                    </div>
-                    <div class="col-md-2 col-sm-4">
-                        <a href="#"><img src="../assets/images/Nestle1-white.png" alt="" class="img-fluid"></a>
-                    </div>
-                    <div class="col-md-2 col-sm-4">
-                        <a href="#"><img src="../assets/images/Betagig1-white.png" alt="" class="img-fluid"></a>
-                    </div>
-                    <div class="col-md-3 col-sm-4">
-                        <a href="#"><img src="../assets/images/Nike1-white.png" alt="" class="img-fluid"></a>
-                    </div>
-                </div>
-                <div class="row" style="opacity:0.5;">
-                    <div class="col-md-6 col-sm-4">
-                        <a href="#"><img src="../assets/images/Nifty-Genius-Logo.png" alt="" class="img-fluid"></a>
-                    </div>
-                    <div class="col-md-6 col-sm-4">
-                        “From February 2017 to March 2017, our revenue has tripled since NICH took over our Facebook Ads.” <sub>James – Nifty Genius | Founder</sub>
-                    </div>
-                </div>
-            </div>
-        </section><!--/testimonials-->
-        <hr class="mt0 mb0">
-        <section id="faq" class="pt90 pb50 ">
-            <div class="container">
-                <div class="text-center center-title mb50">
-                    <h2 class="text-capitalize text-center font100">Frequently Asked Questions</h2>
-                </div>
-                <div class="row">
-                    <div class="col-md-4 mb40">
-                        <h4 class="font300">Nulla blandit eu eros nec ultrices?</h4>
-                        <p>
-                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                        </p>
-                    </div><!--/col-->
-                    <div class="col-md-4 mb40">
-                        <h4 class="font300">Nulla blandit eu eros nec ultrices?</h4>
-                        <p>
-                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                        </p>
-                    </div><!--/col-->
-                    <div class="col-md-4 mb40">
-                        <h4 class="font300">Nulla blandit eu eros nec ultrices?</h4>
-                        <p>
-                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                        </p>
-                    </div><!--/col-->
-                </div>
-                <div class="row">
-                    <div class="col-md-4 mb40">
-                        <h4 class="font300">Nulla blandit eu eros nec ultrices?</h4>
-                        <p>
-                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                        </p>
-                    </div><!--/col-->
-                    <div class="col-md-4 mb40">
-                        <h4 class="font300">Nulla blandit eu eros nec ultrices?</h4>
-                        <p>
-                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                        </p>
-                    </div><!--/col-->
-                    <div class="col-md-4 mb40">
-                        <h4 class="font300">Nulla blandit eu eros nec ultrices?</h4>
-                        <p>
-                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                        </p>
-                    </div><!--/col-->
-                </div>
-            </div>
-        </section><!--faqs-->
-        <div class="newsletter bg-black-trans">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 text-center offset-md-3">
-                        <h2 class="font300">Sign Up for Newsletter</h2>
-                        <p class="mb30">
-                            Don't worry, we won't need your credit card details. Just enter your 
-                            email address and we'll take care of the rest.
-                        </p>
-                        <div class="newsletter-form">
-                            <form>
-                                <input type="email" class="form-control" placeholder="Enter Email..." required="">
-                                <button type="submit" class="btn-newsletter">Subscribe</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div><!--/newsletter-->
+        <app-associates></app-associates>
+
+
+
+
+        
+        <app-faq></app-faq>
+
+
+        <app-info></app-info>
 
 
 
