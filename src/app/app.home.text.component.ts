@@ -20,37 +20,84 @@ import { trigger, animate, style, keyframes, transition } from '@angular/animati
 export class HomeTextComponent implements OnInit {
     
     text: string = 'start';
-    current1: string = 'current1Text';
-    current2: string = 'current2Text';
-    words: any = {
+
+    wordsArray: any = [
+        {
+            'contractor0': {
+                'sales': 'sales0', 
+                'downloads': 'downloads0', 
+                'leads': 'leads0' 
+        }},
+        {
+            'contractor1': {
+                'sales': 'sales1', 
+                'downloads': 'downloads1', 
+                'leads': 'leads1' 
+        }},
+        {
+            'contractor2': {
+                'sales': 'sales2', 
+                'downloads': 'downloads2', 
+                'leads': 'leads2' 
+        }},
+        {
+            'contractor3': {
+                'sales': 'sales3', 
+                'downloads': 'downloads3', 
+                'leads': 'leads3' 
+        }}
+
+    ];
+    
+    words = {
         'contractor0': {
-            'sales': 'sales0', 'downloads': 'downloads0', 'leads': 'leads0' },
+            'sales': 'sales0', 
+            'downloads': 'downloads0', 
+            'leads': 'leads0' 
+        },
         'contractor1': {
-            'sales': 'sales1', 'downloads': 'downloads1', 'leads': 'leads1' },
+            'sales': 'sales1', 
+            'downloads': 'downloads1', 
+            'leads': 'leads1' 
+        },
+        'contractor2': {
+            'sales': 'sales2', 
+            'downloads': 'downloads2', 
+            'leads': 'leads2' 
+        },
+        'contractor3': {
+            'sales': 'sales3', 
+            'downloads': 'downloads3', 
+            'leads': 'leads3' 
+        },
     };
+    
+    current1: string = 'You';
+    current2: string = 'Us';
+
 
     ngOnInit() {
-        console.log(this.words.contractor0.sales);
-        for (let key of Object.keys(this.words)) {
-            console.log(key);
-            for (let subkey of Object.keys(this.words[key])) {
-                console.log(this.words[key][subkey]);
-            }
-        };
+        this.foobaz();
+
 //        this.foobar();
     }
 
-    foobar() {
-        console.log("0");
-        for (let i = 0; i < 3; i++) {
-            console.log("2");
+    foobaz() {
+        for (let i = 0; i < this.wordsArray.length; i = i + 1) {
+            
         }
-        for (let key in this.words) {
-            console.log("1");
-            console.log(key);
-            for (var subkey in this.words[key]){
-                console.log(this.words[key][subkey]);
-            }//for
-        }//for
+    }
+
+    foobar() { // for iterating a nested dictionary while listing the first dimension properties
+        for (let key of Object.keys(this.words)) {
+            setInterval(() => {
+                this.current1 = key;
+            }, 3000);            
+            for (let subkey of Object.keys(this.words[key])) {
+                setInterval(() => {
+                    this.current2 = this.words[key][subkey];
+                }, 3000);
+            }
+        };
     }
 }
