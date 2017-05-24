@@ -6,7 +6,7 @@ import { trigger, animate, style, keyframes, transition } from '@angular/animati
     templateUrl: './app.home.component.html',
     styleUrls: ['../assets/css/style.css'],
     animations: [
-        trigger('FormFade', [
+        trigger('formFade', [
             transition('void => *', [
                 animate("6s", keyframes([
                     style({ opacity: 0 }),

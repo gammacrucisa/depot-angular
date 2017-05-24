@@ -11,26 +11,28 @@ import { HomeComponent } from './app.home.component';
 import { FooterComponent } from './app.footer.component';
 import { FormComponent } from './app.form.component';
 import { StaffComponent } from './app.staff.component';
-import { StaffService } from './app.staff.service';
+import { HomeTextComponent } from './app.home.text.component';
+
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    NgbModule.forRoot(),
-    BrowserAnimationsModule
-  ],
-  declarations: [
-    AppComponent,
-    NavBarComponent,
-    HomeComponent,
-    FooterComponent,
-    FormComponent,
-    StaffComponent,
-  ],
-  providers: [StaffService],
-  bootstrap: [AppComponent]
+    imports: [
+        BrowserModule,
+        FormsModule,
+        HttpModule,
+        NgbModule.forRoot(),
+        BrowserAnimationsModule
+    ],
+    declarations: [
+        AppComponent,
+        NavBarComponent,
+        HomeComponent,
+        FooterComponent,
+        FormComponent,
+        StaffComponent,
+        HomeTextComponent
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
