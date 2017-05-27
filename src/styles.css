@@ -23,6 +23,16 @@ app-form {
     width: 550px;
     padding-top: 20px;
 }
+app-home-text {
+    position: absolute;
+    top: 45vh;
+    left: calc(50vw - (550px / 2));
+    display: inline-block;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 550px;
+    padding-top: 20px;
+}
 .app-form {
     
 }
@@ -39,9 +49,9 @@ form {}
 app-staff {
     background-image:url(assets/images/bg1.jpg);
     background-position: center center;
-			background-repeat:  no-repeat;
-			background-attachment: fixed;
-			background-size:  cover;
+    background-repeat:  no-repeat;
+    background-attachment: fixed;
+    background-size:  cover;
     color: black;
 }
 video {
@@ -63,4 +73,22 @@ body {
     border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
 
- 
+#current1 {
+    
+}
+#contractor0 {
+    clear: none;
+    display: inline-block;
+    width: 168px;
+    height: 23px;
+    background: url(assets/images/clientTypeTest23.png) 0px 0px;
+}
+#square0 {
+    position: absolute;
+    top
+    clear: none;
+    display: inline-block;
+    width: 500px;
+    height: 500px;
+    background: url(assets/images/clientTypeTest23.png) 0px 0px;
+}

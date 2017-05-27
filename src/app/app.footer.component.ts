@@ -6,10 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['../assets/css/style.css']
 })
 export class FooterComponent {
-  title = 'Footer'; // Not being used.
-  supportEmail = 'support@nich.com';
-  supportPhone = '424.278.0977';
-  currentYear = new Date().getFullYear() + 10;
+  title: string = 'Footer'; // Not being used.
+  supportEmail: string = 'support@nich.com';
+  supportPhone: string = '424.278.0977';
+  currentYear: number = new Date().getFullYear() + 10;
 
   onClick() {
     console.log('clicked');

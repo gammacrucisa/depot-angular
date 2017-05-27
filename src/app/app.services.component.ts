@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { trigger, state, animate, style, keyframes, transition } from '@angular/animations';
+import { trigger, state, animate, style, keyframes, transition } 
+    from '@angular/animations';
 
 @Component({
     selector: 'app-services',
     templateUrl: './app.services.component.html',
     styleUrls: ['../assets/css/style.css'],
     animations: [
-        trigger('aboutFade', [
+        trigger('#', [
             state('start', style({
                 backgroundColor: "rgba(0, 0, 0, 0)",
             })),

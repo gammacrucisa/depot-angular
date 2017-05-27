@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { trigger, state, animate, style, keyframes, transition } from '@angular/animations';
+import { trigger, state, animate, style, keyframes, transition } 
+    from '@angular/animations';
 
 @Component({
     selector: 'app-info',
     templateUrl: './app.info.component.html',
     styleUrls: ['../assets/css/style.css'],
     animations: [
-        trigger('aboutFade', [
+        trigger('#', [
             state('start', style({
                 backgroundColor: "rgba(0, 0, 0, 0)",
             })),
@@ -23,24 +24,7 @@ import { trigger, state, animate, style, keyframes, transition } from '@angular/
 export class InfoComponent implements OnInit {
     state: string = 'start';
 
-    images = [
-      {
-        img: '../assets/images/imac.png',
-        caption: 'KNH Yaki'
-      },
-      {
-        img: '../assets/images/imac2.png',
-        caption: '5000 trillion dollars'
-      }
-    ];
-
     ngOnInit() {
-        //setTimeout(() => this.changeState(), 6000);
-        console.log('hola');
-    }
 
-    changeState() {
-        console.log('hellllo');
-        this.state = (this.state === 'start') ? 'finish' : 'start';
     }
 }

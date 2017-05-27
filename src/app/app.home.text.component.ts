@@ -1,69 +1,65 @@
 import { Component, OnInit } from '@angular/core';
-import { trigger, animate, style, keyframes, transition } 
+import { trigger, animate, style, keyframes, transition, state } 
     from '@angular/animations';
+import { Observable } from 'rxjs/Rx';
 
 @Component({
     selector: 'app-home-text',
     templateUrl: './app.home.text.component.html',
     styleUrls: ['../assets/css/style.css'],
     animations: [
-        trigger('textSlide', [
+        trigger('wordSlide', [
+/*            transition('void <=> *', animate('4000ms ease', keyframes([
+                style({
+                    background: "url(assets/images/clientTypeTest23.png) 0px 0px",
+                    offset: 0,
+                }),
+                style({
+                    background: "url(assets/images/clientTypeTest23.png) -168px 0px",
+                    offset: 0.5,
+                }),
+                style({
+                    background: "url(assets/images/clientTypeTest23.png) -336px 0px",
+                    offset: 1,
+                }),
+            ]))),*/
+            
             transition('void => *', [
-                animate("6s", keyframes([
-                    style({ opacity: 0 }),
-                    style({ opacity: 1 }),
+                animate(1000, keyframes([
+                    style({
+                        opacity: 1,
+                        transform: 'scale3d(.475, .475, .475) translate3d(0, 60px, 0)',
+                        animationTimingFunction: 'cubic-bezier(0.550, 0.055, 0.675, 0.190)',
+                        offset: 0.4
+                    }),
+                    style({
+                        opacity: 0,
+                        transform: 'scale3d(.1, .1, .1) translate3d(0, -2000px, 0)',
+                        transformOrigin: 'center bottom',
+                        animationTimingFunction: 'cubic-bezier(0.175, 0.885, 0.320, 1)',
+                        offset: 1
+                    })
                 ]))
             ])
+            
+//            transition('finish => start', animate('4000ms ease')),
         ])
     ]
 })
-
 export class HomeTextComponent implements OnInit {
     
-    text: string = 'start';
-    
-    current1: string = 'Person';
-    current2: string = 'Help';
-    
-    wordsArray: any = [
-        [
-            'contractor0', [
-                'sales0', 
-                'downloads0', 
-                'leads0' 
-        ]],
-        [
-            'contractor1', [
-                'sales1', 
-                'downloads1', 
-                'leads1' 
-        ]],
-        [
-            'contractor2', [
-                'sales2', 
-                'downloads2', 
-                'leads2' 
-        ]],
-        [
-            'contractor3', [
-                'sales3', 
-                'downloads3', 
-                'leads3' 
-        ]]
-
-    ];
+    wordSlideState: string = 'start';
+    time: number = Math.random() * 1000;
 
     ngOnInit() {
-        this.wordScroll();
+        //this.changeState();
+        setInterval(() => {
+            this.changeState();
+        }, Math.random() * 1000); 
+    }
+    
+    changeState() {
+//        this.state = (this.state === 'start') ? 'finish' : 'start' ;
     }
 
-    wordScroll() {
-        for (let i = 0; i < this.wordsArray.length; i = i + 1) {
-            this.current1 = this.wordsArray[i][0];
-            
-            for (let j = 0; j < this.wordsArray[i][1].length; j = j + 1) {
-                this.current2 = this.wordsArray[i][1][j];
-            }
-        }
-    };
 }

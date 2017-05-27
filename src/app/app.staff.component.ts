@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Staff, StaffService } from './app.staff.service';
-import { trigger, state, style, transition, keyframes, animate } from '@angular/animations';
+import { trigger, state, style, transition, keyframes, animate } 
+    from '@angular/animations';
 
 @Component({
     selector: 'app-staff',
@@ -8,10 +9,10 @@ import { trigger, state, style, transition, keyframes, animate } from '@angular/
     styleUrls: ['../assets/css/style.css'],
     animations: [
         trigger('sectionBorder', [
-            state('inactive', style({
+            state('start', style({
                 borderTop: "1px solid rgba(255, 255, 255, 0.0)",
             })),
-            state('active', style({
+            state('finish', style({
                 borderTop: "1px solid rgba(255, 255, 255, 0.5)",
             })),
             transition('inactive => active', animate('4000ms ease')),
