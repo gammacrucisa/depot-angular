@@ -8,8 +8,8 @@ import { Observable } from 'rxjs/Rx';
     templateUrl: './app.home.text.component.html',
     styleUrls: ['../assets/css/style.css'],
     animations: [
-        trigger('wordSlide', [
-/*            transition('void <=> *', animate('4000ms ease', keyframes([
+/*        trigger('wordSlide', [
+            transition('start <=> finish', animate('2000ms ease', keyframes([
                 style({
                     background: "url(assets/images/clientTypeTest23.png) 0px 0px",
                     offset: 0,
@@ -24,7 +24,22 @@ import { Observable } from 'rxjs/Rx';
                 }),
             ]))),*/
             
-            transition('void => *', [
+        trigger('wordSlide', [
+            state('first', style({
+                background: 'url(assets/images/clientTypeTest23.png) 0px 0px',
+            })),
+            state('second', style({
+                background: 'url(assets/images/clientTypeTest23.png) -168px 0px',
+            })),
+            state('third', style({
+                background: 'url(assets/images/clientTypeTest23.png) -336px 0px',
+            })),
+            transition('first => second', animate(2000)),
+            transition('second => third', animate(2000)),
+            transition('third => first', animate(2000)),
+        ]),
+/*            
+            transition('start <=> finish', [
                 animate(1000, keyframes([
                     style({
                         opacity: 1,
@@ -40,26 +55,42 @@ import { Observable } from 'rxjs/Rx';
                         offset: 1
                     })
                 ]))
-            ])
+            ])*/
             
 //            transition('finish => start', animate('4000ms ease')),
-        ])
-    ]
+        ]
+    
 })
 export class HomeTextComponent implements OnInit {
     
-    wordSlideState: string = 'start';
+    wordSlideState: string = 'first';
     time: number = Math.random() * 1000;
 
     ngOnInit() {
         //this.changeState();
         setInterval(() => {
-            this.changeState();
-        }, Math.random() * 1000); 
+            this.changeWordSlideState();
+        }, 3000); 
     }
     
-    changeState() {
-//        this.state = (this.state === 'start') ? 'finish' : 'start' ;
+    changeWordSlideState() {
+//        this.wordSlideState = (this.wordSlideState === 'start') ? 'finish' : 'start' ;
+        switch(this.wordSlideState) {
+               case ('first'): {
+                   this.wordSlideState = 'second';
+                   break;
+               }
+               case ('second'): {
+                   this.wordSlideState = 'third';
+                   break;
+               }
+               case ('third'): {
+                   this.wordSlideState = 'first';
+                   break;
+               }
+                
+               
+        }
     }
 
 }
