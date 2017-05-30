@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
   title: string = 'Footer'; // Not being used.
-  supportEmail: string = 'support@nich.com';
-  supportPhone: string = '424.278.0977';
+  supportEmail: string = 'pwcse1@gmail.com';
+  supportPhone: string = '323.425.1670';
   currentYear: number = new Date().getFullYear() + 10;
 
   onClick() {

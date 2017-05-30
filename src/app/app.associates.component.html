@@ -5,20 +5,8 @@
                     <h2 class="text-capitalize text-center font100">Associates</h2>
                 </div>
                 <div class="row clients-row">
-                    <div class="col-md-3 col-sm-4">
-                        <a href="#"><img src="../assets/images/AARP1-white.png" alt="" class="img-fluid"></a>
-                    </div>
-                    <div class="col-md-2 col-sm-4">
-                        <a href="#"><img src="../assets/images/Suzuki1-white.png" alt="" class="img-fluid"></a>
-                    </div>
-                    <div class="col-md-2 col-sm-4">
-                        <a href="#"><img src="../assets/images/Nestle1-white.png" alt="" class="img-fluid"></a>
-                    </div>
-                    <div class="col-md-2 col-sm-4">
-                        <a href="#"><img src="../assets/images/Betagig1-white.png" alt="" class="img-fluid"></a>
-                    </div>
-                    <div class="col-md-3 col-sm-4">
-                        <a href="#"><img src="../assets/images/Nike1-white.png" alt="" class="img-fluid"></a>
+                    <div class="col-md-3 col-sm-4" *ngFor="let associate of associates">
+                        <a href="#"><img src="{{associate.img}}" alt="" class="img-fluid"></a>
                     </div>
                 </div>
                 <div class="row" style="opacity:0.5;">

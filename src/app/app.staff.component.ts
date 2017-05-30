@@ -13,7 +13,7 @@ import { trigger, state, style, transition, keyframes, animate }
                 borderTop: "1px solid rgba(255, 255, 255, 0.0)",
             })),
             state('finish', style({
-                borderTop: "1px solid rgba(255, 255, 255, 0.5)",
+                borderTop: "1px solid rgba(255, 255, 255, 0.0)",
             })),
             transition('inactive => active', animate('4000ms ease')),
             //transition('active => inactive', animate('4000ms ease')),
@@ -36,21 +36,24 @@ export class StaffComponent {
             "first": "Freddy",
             "last": "Frankenstan",
             "role": "Sales",
-            "bio": "Lorem ipsum dolor sit amet, movet complectitur usu cu, sed ex exerci blandit. Et sea clita noster discere, aeque delectus verterem ad eos."
+            "bio": "Lorem ipsum dolor sit amet, movet complectitur usu cu, sed ex exerci blandit. Et sea clita noster discere, aeque delectus verterem ad eos.",
+            imageFront: '../assets/images/rotating_card_profile.png'
         },
         {
             "id": 1,
             "first": "Steve",
             "last": "Stuvy",
             "role": "Developer",
-            "bio": "Has equidem splendide at, id cum copiosae prodesset. Animal inermis oportere no vim, at perpetua voluptatum dissentias sea. Putent omittantur instructior ad cum."
+            "bio": "Has equidem splendide at, id cum copiosae prodesset. Animal inermis oportere no vim, at perpetua voluptatum dissentias sea. Putent omittantur instructior ad cum.",
+            imageFront: '../assets/images/rotating_card_profile2.png'
         },
         {
             "id": 2,
             "first": "Gary",
             "last": "Grandlefuss",
             "role": "Artist",
-            "bio": "Audire feugait ut nam, labore eligendi mel ne, sumo numquam sed eu. Dicant appetere adipiscing ne vel, ad vix torquatos philosophia."
+            "bio": "Audire feugait ut nam, labore eligendi mel ne, sumo numquam sed eu. Dicant appetere adipiscing ne vel, ad vix torquatos philosophia.",
+            imageFront: '../assets/images/rotating_card_profile3.png'
         }
     ];
 }

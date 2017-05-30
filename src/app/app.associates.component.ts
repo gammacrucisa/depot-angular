@@ -24,13 +24,21 @@ import { trigger, state, animate, style, keyframes, transition }
 export class AssociatesComponent implements OnInit {
     state: string = 'start';
 
-    images = [
+    associates = [
       {
-        img: '../assets/images/imac.png',
+        img: '../assets/images/AARP1-black.png',
         caption: 'KNH Yaki'
       },
       {
-        img: '../assets/images/imac2.png',
+        img: '../assets/images/Suzuki1-black.png',
+        caption: '5000 trillion dollars'
+      },
+              {
+        img: '../assets/images/Betagig1-black.png',
+        caption: 'KNH Yaki'
+      },
+      {
+        img: '../assets/images/Nike1-black.png',
         caption: '5000 trillion dollars'
       }
     ];
