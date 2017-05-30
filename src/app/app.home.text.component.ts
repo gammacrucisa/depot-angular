@@ -26,25 +26,24 @@ import { Observable } from 'rxjs/Rx';
             
         trigger('wordSlide', [
             state('first', style({
-                background: 'url(assets/images/home-words-developer.png) 0px 0px',
-                filter: 'blur(0px)',
+                background: 'url(assets/images/home-words-short-white-trans-developer.png) 0px 0px',
             })),
             state('second', style({
-                background: 'url(assets/images/home-words-artisan.png) 0px 0px',
+                background: 'url(assets/images/home-words-short-white-trans-artisan.png) 0px 0px',
                 filter: 'blur(0px)',
             })),
             state('third', style({
-                background: 'url(assets/images/clientTypeTest23.png) -336px 0px',
+                background: 'url(assets/images/home-words-short-white-trans-wholesaler.png) 0px 0px',
                 filter: 'blur(0px)',
             })),
             state('fourth', style({
-                background: 'url(assets/images/clientTypeTest23.png) -336px 0px',
+                background: 'url(assets/images/home-words-short-white-trans-downloads.png) 0px 0px',
                 filter: 'blur(0px)',
             })),
-            transition('first => second', animate(0)),
-            transition('second => third', animate(0)),
-            transition('third => fourth', animate(0)),
-            transition('fourth => first', animate(0)),
+            transition('first => second', animate(100)),
+            transition('second => third', animate(100)),
+            transition('third => fourth', animate(100)),
+            transition('fourth => first', animate(100)),
         ]),
 /*            
             transition('start <=> finish', [
@@ -71,66 +70,44 @@ import { Observable } from 'rxjs/Rx';
 })
 export class HomeTextComponent implements AfterViewInit {
     
-    clientSlideState: string = 'first';
-    needSlideState: string = 'first';
+    slideState: string = 'first';
     time: number = 1000;
     interval: number;
 
     ngAfterViewInit() {
       //this.changeState();
 //      this.time = 3000;
-        this.interval = setInterval(() => {
-           this.changeClientSlideState();
-        }, this.time); 
+        setTimeout(() => {
+            setInterval(() => {
+                this.changeSlideState();
+                }, this.time); 
+        }, 3000);
+
     }
     
-    changeClientSlideState() {
-//        this.wordSlideState = (this.wordSlideState === 'start') ? 'finish' : 'start' ;
-        switch(this.clientSlideState) {
+    changeSlideState() {
+//        this.slideState = (this.slideState === 'start') ? 'finish' : 'start' ;
+        switch(this.slideState) {
                case ('first'): {
-                   this.clientSlideState = 'second';
+                   this.slideState = 'second';
                    break;
                }
                case ('second'): {
-                   this.clientSlideState = 'third';
+                   this.slideState = 'third';
                    break;
                }
                case ('third'): {
-                   this.clientSlideState = 'fourth';
+                   this.slideState = 'fourth';
                    break;
                }
                 
                case ('fourth'): {
-                   this.clientSlideState = 'first';
+                   this.slideState = 'first';
                    break;
                }
                 
                
         }
     }  
-     changeNeedSlideState() {
-//        this.wordSlideState = (this.wordSlideState === 'start') ? 'finish' : 'start' ;
-        switch(this.needSlideState) {
-               case ('first'): {
-                   this.needSlideState = 'second';
-                   break;
-               }
-               case ('second'): {
-                   this.needSlideState = 'third';
-                   break;
-               }
-               case ('third'): {
-                   this.needSlideState = 'fourth';
-                   break;
-               }
-                
-               case ('fourth'): {
-                   this.needSlideState = 'first';
-                   break;
-               }
-                
-               
-        }
-    }
-
+    
 }
