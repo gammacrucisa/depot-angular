@@ -5,44 +5,30 @@
                     <h2 class="text-capitalize text-center font100">Frequently Asked Questions</h2>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 mb40">
-                        <h4 class="font300">Nulla blandit eu eros nec ultrices?</h4>
-                        <p>
-                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                        </p>
-                    </div><!--/col-->
-                    <div class="col-md-4 mb40">
-                        <h4 class="font300">Nulla blandit eu eros nec ultrices?</h4>
-                        <p>
-                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                        </p>
-                    </div><!--/col-->
-                    <div class="col-md-4 mb40">
-                        <h4 class="font300">Nulla blandit eu eros nec ultrices?</h4>
-                        <p>
-                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                        </p>
+                    <div class="col-md-4 mb40" *ngFor="let faq of faqs">
+                        <h4 class="font300">{{faq.question}}</h4>
+                        <p>{{faq.answer}}</p>
                     </div><!--/col-->
                 </div>
-                <div class="row">
+<!--                <div class="row">
                     <div class="col-md-4 mb40">
                         <h4 class="font300">Nulla blandit eu eros nec ultrices?</h4>
                         <p>
                             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
                         </p>
-                    </div><!--/col-->
+                    </div>
                     <div class="col-md-4 mb40">
                         <h4 class="font300">Nulla blandit eu eros nec ultrices?</h4>
                         <p>
                             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
                         </p>
-                    </div><!--/col-->
+                    </div>
                     <div class="col-md-4 mb40">
                         <h4 class="font300">Nulla blandit eu eros nec ultrices?</h4>
                         <p>
                             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
                         </p>
-                    </div><!--/col-->
-                </div>
+                    </div>
+                </div>-->
             </div>
         </section><!--faqs-->

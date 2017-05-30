@@ -24,14 +24,32 @@ import { trigger, state, animate, style, keyframes, transition }
 export class FaqComponent implements OnInit {
     state: string = 'start';
 
-    images = [{
-            img: '../assets/images/imac.png',
-            caption: 'KNH Yaki'
+    faqs = [
+        {
+            question: 'Quae cum dixisset paulumque institisset, Quid est?',
+            answer: 'Si enim ita est, vide ne facinus facias, cum mori suadeas. Itaque eos id agere, ut a se dolores, morbos, debilitates repellant. Sed quanta sit alias, nunc tantum possitne esse tanta. Quid enim de amicitia statueris utilitatis causa expetenda vides.'
         },
         {
-            img: '../assets/images/imac2.png',
-            caption: '5000 trillion dollars'
-    }];
+            question: 'Quae cum dixisset paulumque institisset, Quid est?',
+            answer: 'Si enim ita est, vide ne facinus facias, cum mori suadeas. Itaque eos id agere, ut a se dolores, morbos, debilitates repellant. Sed quanta sit alias, nunc tantum possitne esse tanta. Quid enim de amicitia statueris utilitatis causa expetenda vides.'
+        },
+        {
+            question: 'Quae cum dixisset paulumque institisset, Quid est?',
+            answer: 'Si enim ita est, vide ne facinus facias, cum mori suadeas. Itaque eos id agere, ut a se dolores, morbos, debilitates repellant. Sed quanta sit alias, nunc tantum possitne esse tanta. Quid enim de amicitia statueris utilitatis causa expetenda vides.'
+        },
+        {
+            question: 'Quae cum dixisset paulumque institisset, Quid est?',
+            answer: 'Si enim ita est, vide ne facinus facias, cum mori suadeas. Itaque eos id agere, ut a se dolores, morbos, debilitates repellant. Sed quanta sit alias, nunc tantum possitne esse tanta. Quid enim de amicitia statueris utilitatis causa expetenda vides.'
+        },
+        {
+            question: 'Quae cum dixisset paulumque institisset, Quid est?',
+            answer: 'Si enim ita est, vide ne facinus facias, cum mori suadeas. Itaque eos id agere, ut a se dolores, morbos, debilitates repellant. Sed quanta sit alias, nunc tantum possitne esse tanta. Quid enim de amicitia statueris utilitatis causa expetenda vides.'
+        },
+        {
+            question: 'Quae cum dixisset paulumque institisset, Quid est?',
+            answer: 'Si enim ita est, vide ne facinus facias, cum mori suadeas. Itaque eos id agere, ut a se dolores, morbos, debilitates repellant. Sed quanta sit alias, nunc tantum possitne esse tanta. Quid enim de amicitia statueris utilitatis causa expetenda vides.'
+        },
+];
 
     ngOnInit() {
         //setTimeout(() => this.changeState(), 6000);
