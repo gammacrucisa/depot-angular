@@ -23,15 +23,37 @@ app-form {
     width: 550px;
     padding-top: 20px;
 }
-app-home-text {
+/*app-home-text {
     position: absolute;
     top: 45vh;
     left: calc(50vw - (550px / 2));
     display: inline-block;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.4);
     width: 550px;
     padding-top: 20px;
+}*/
+app-home-text {
+    position: absolute;
+    top: 0;
+    left: 0;    
+    display: block;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100vw;
+    height: 100vh;
+    padding-top: 20px;
+    vertical-align: middle;
+    margin: auto;
+    text-align: center;
+}
+
+.home-text {
+    display: block;
+    vertical-align: middle;
+    margin-top: 30vh;
+    position: absolute;
+    
 }
 .app-form {
     
@@ -77,15 +99,20 @@ body {
     
 }
 #contractor0 {
-    clear: none;
     display: inline-block;
-    width: 168px;
-    height: 23px;
-    background: url(assets/images/clientTypeTest23.png) 0px 0px;
+    width: 800px;
+    height: 100px;
+    background-image: url(assets/images/home-words-short-white-trans-developer.png);
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;  
+    filter: blur(0px);
+    z-index: 1;
+    opacity: 0.8;
+    filter:
 }
 #square0 {
     position: absolute;
-    top
     clear: none;
     display: inline-block;
     width: 500px;

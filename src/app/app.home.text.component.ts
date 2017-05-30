@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { trigger, animate, style, keyframes, transition, state } 
     from '@angular/animations';
 import { Observable } from 'rxjs/Rx';
@@ -26,17 +26,25 @@ import { Observable } from 'rxjs/Rx';
             
         trigger('wordSlide', [
             state('first', style({
-                background: 'url(assets/images/clientTypeTest23.png) 0px 0px',
+                background: 'url(assets/images/home-words-developer.png) 0px 0px',
+                filter: 'blur(0px)',
             })),
             state('second', style({
-                background: 'url(assets/images/clientTypeTest23.png) -168px 0px',
+                background: 'url(assets/images/home-words-artisan.png) 0px 0px',
+                filter: 'blur(0px)',
             })),
             state('third', style({
                 background: 'url(assets/images/clientTypeTest23.png) -336px 0px',
+                filter: 'blur(0px)',
             })),
-            transition('first => second', animate(2000)),
-            transition('second => third', animate(2000)),
-            transition('third => first', animate(2000)),
+            state('fourth', style({
+                background: 'url(assets/images/clientTypeTest23.png) -336px 0px',
+                filter: 'blur(0px)',
+            })),
+            transition('first => second', animate(0)),
+            transition('second => third', animate(0)),
+            transition('third => fourth', animate(0)),
+            transition('fourth => first', animate(0)),
         ]),
 /*            
             transition('start <=> finish', [
@@ -61,31 +69,63 @@ import { Observable } from 'rxjs/Rx';
         ]
     
 })
-export class HomeTextComponent implements OnInit {
+export class HomeTextComponent implements AfterViewInit {
     
-    wordSlideState: string = 'first';
-    time: number = Math.random() * 1000;
+    clientSlideState: string = 'first';
+    needSlideState: string = 'first';
+    time: number = 1000;
+    interval: number;
 
-    ngOnInit() {
-        //this.changeState();
-        setInterval(() => {
-            this.changeWordSlideState();
-        }, 3000); 
+    ngAfterViewInit() {
+      //this.changeState();
+//      this.time = 3000;
+        this.interval = setInterval(() => {
+           this.changeClientSlideState();
+        }, this.time); 
     }
     
-    changeWordSlideState() {
+    changeClientSlideState() {
 //        this.wordSlideState = (this.wordSlideState === 'start') ? 'finish' : 'start' ;
-        switch(this.wordSlideState) {
+        switch(this.clientSlideState) {
                case ('first'): {
-                   this.wordSlideState = 'second';
+                   this.clientSlideState = 'second';
                    break;
                }
                case ('second'): {
-                   this.wordSlideState = 'third';
+                   this.clientSlideState = 'third';
                    break;
                }
                case ('third'): {
-                   this.wordSlideState = 'first';
+                   this.clientSlideState = 'fourth';
+                   break;
+               }
+                
+               case ('fourth'): {
+                   this.clientSlideState = 'first';
+                   break;
+               }
+                
+               
+        }
+    }  
+     changeNeedSlideState() {
+//        this.wordSlideState = (this.wordSlideState === 'start') ? 'finish' : 'start' ;
+        switch(this.needSlideState) {
+               case ('first'): {
+                   this.needSlideState = 'second';
+                   break;
+               }
+               case ('second'): {
+                   this.needSlideState = 'third';
+                   break;
+               }
+               case ('third'): {
+                   this.needSlideState = 'fourth';
+                   break;
+               }
+                
+               case ('fourth'): {
+                   this.needSlideState = 'first';
                    break;
                }
                 

@@ -52,9 +52,9 @@ body {
     background: #006679;
 /*    background: -webkit-linear-gradient(to right, #a471a2, #006679);*/
 /*    background: linear-gradient(to right, #a471a2, #006679);*/
-    background: linear-gradient(-45deg, #a471a2, #006679);
-    background-size: 400% 400%;
-    animation: Gradient 20s ease infinite;
+/*    background: linear-gradient(-45deg, #a471a2, #006679);*/
+/*    background-size: 400% 400%;*/
+/*    animation: Gradient 20s ease infinite;*/
     background-position: fixed;
     background-attachment: fixed;
     font-size: 18px;
@@ -340,7 +340,7 @@ section {
 2 - navbar style
 */
 .navbar-inverse.transparent-nav {
-  padding: 10px 0; }
+  padding: 5px 0; }
   .navbar-inverse.transparent-nav.bg-inverse {
     background: #000 !important;
     transition: all 0.3s; }
