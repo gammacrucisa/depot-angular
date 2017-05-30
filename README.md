@@ -1,6 +1,10 @@
 # Nich
 
-Project projected completion May 30, 2017.
+Project projected completion June 13, 2017.
+
+## Compatibility
+
+Currently testing on Chrome (58). Will update for older / different browsers before completion.
 
 ## About
 
