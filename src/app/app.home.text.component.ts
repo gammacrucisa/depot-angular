@@ -40,10 +40,10 @@ import { Observable } from 'rxjs/Rx';
                 background: 'url(assets/images/home-words-short-white-trans-downloads.png) 0px 0px',
                 filter: 'blur(0px)',
             })),
-            transition('first => second', animate(100)),
-            transition('second => third', animate(100)),
-            transition('third => fourth', animate(100)),
-            transition('fourth => first', animate(100)),
+            transition('first => second', [style({filter:'blur(5px)'}), animate(200)]),
+            transition('second => third', [style({filter:'blur(5px)'}), animate(200)]),
+            transition('third => fourth', [style({filter:'blur(5px)'}), animate(200)]),
+            transition('fourth => first', [style({filter:'blur(5px)'}), animate(200)]),
         ]),
 /*            
             transition('start <=> finish', [
@@ -71,7 +71,7 @@ import { Observable } from 'rxjs/Rx';
 export class HomeTextComponent implements AfterViewInit {
     
     slideState: string = 'first';
-    time: number = 1000;
+    time: number = 2000;
     interval: number;
 
     ngAfterViewInit() {
