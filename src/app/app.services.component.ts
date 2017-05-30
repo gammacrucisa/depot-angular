@@ -24,15 +24,28 @@ import { trigger, state, animate, style, keyframes, transition }
 export class ServicesComponent implements OnInit {
     state: string = 'start';
 
-    images = [
-      {
-        img: '../assets/images/imac.png',
-        caption: 'KNH Yaki'
-      },
-      {
-        img: '../assets/images/imac2.png',
-        caption: '5000 trillion dollars'
-      }
+    services = [
+        {
+            icon: '../assets/images/ic_equalizer_black_48px.svg',
+            caption: 'Paid Search Marketing'
+        },
+        {
+            icon: '../assets/images/ic_thumb_up_black_48px.svg',
+            caption: 'Facebook & Social Advertising'
+        },
+        {
+            icon: '../assets/images/ic_web_black_48px.svg',
+            caption: 'Web Development'
+        },
+        {
+            icon: '../assets/images/ic_trending_up_black_48px.svg',
+            caption: 'Search Engine Optimization'
+        },
+        {
+            icon: '../assets/images/ic_wc_black_48px.svg',
+            caption: 'Branding & Content Development'
+        },
+    
     ];
 
     ngOnInit() {

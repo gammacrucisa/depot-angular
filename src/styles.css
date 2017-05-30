@@ -108,7 +108,7 @@ body {
     background-position: center center;  
     filter: blur(0px);
     z-index: 1;
-    opacity: 0.8;
+    opacity: 1;
 }
 
 .parallax {
