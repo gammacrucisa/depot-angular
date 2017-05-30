@@ -4,7 +4,9 @@ Project projected completion June 13, 2017.
 
 ## Compatibility
 
-Currently testing on Chrome (58). Will update for older / different browsers before completion.
+Currently testing on Chrome (58). Will update for older / different browsers before completion. 
+
+Smaller breakpoints still need some work, largest breakpoint is where most testing and development is taking place. Will resolve before completion.
 
 ## About
 
