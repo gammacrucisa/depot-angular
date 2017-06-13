@@ -8,14 +8,17 @@ import { trigger, state, style, transition, keyframes, animate }
     templateUrl: './app.staff.component.html',
     styleUrls: ['../assets/css/style.css'],
     animations: [
-        trigger('sectionBorder', [
-            state('start', style({
-                borderTop: "1px solid rgba(255, 255, 255, 0.0)",
+        trigger('fadeInOut', [
+            state('fadeOut', style({
+                opacity: 1,
             })),
-            state('finish', style({
-                borderTop: "1px solid rgba(255, 255, 255, 0.0)",
+            state('fadeIn', style({
+                opacity: 1,
             })),
-            transition('inactive => active', animate('4000ms ease')),
+            transition('fadeOut <=> fadeIn', animate('250ms ease', style({
+                opacity: 0,
+                transform: 'rotateY( 180deg )',                
+            }))),
             //transition('active => inactive', animate('4000ms ease')),
         ])
     ]
@@ -24,35 +27,39 @@ import { trigger, state, style, transition, keyframes, animate }
 
 export class StaffComponent {
     
-    state: string = 'inactive';
+    state: string = 'none';
 
-    changeState() {
-        this.state = (this.state === 'inactive') ? 'active' : 'inactive';  
-    };
+    flip() {
+        console.log(0);
+        this.state = ( this.state === 'none' ) ? 'fadeOut' : 'front';
+    }
     
     staff = [
         {
-            "id": 0,
-            "first": "Freddy",
-            "last": "Frankenstan",
-            "role": "Sales",
-            "bio": "Lorem ipsum dolor sit amet, movet complectitur usu cu, sed ex exerci blandit. Et sea clita noster discere, aeque delectus verterem ad eos.",
+            id: 0,
+            visible: true,
+            first: 'Freddy',
+            last: 'Freeze',
+            role: 'Sales',
+            bio: 'Lorem ipsum dolor sit amet, movet complectitur usu cu, sed ex exerci blandit. Et sea clita noster discere, aeque delectus verterem ad eos.',
             imageFront: '../assets/images/rotating_card_profile.png'
         },
         {
-            "id": 1,
-            "first": "Steve",
-            "last": "Stuvy",
-            "role": "Developer",
-            "bio": "Has equidem splendide at, id cum copiosae prodesset. Animal inermis oportere no vim, at perpetua voluptatum dissentias sea. Putent omittantur instructior ad cum.",
+            'id': 1,
+            visible: true,
+            'first': 'Steve',
+            'last': 'Stuvy',
+            'role': 'Developer',
+            'bio': 'Has equidem splendide at, id cum copiosae prodesset. Animal inermis oportere no vim, at perpetua voluptatum dissentias sea. Putent omittantur instructior ad cum.',
             imageFront: '../assets/images/rotating_card_profile2.png'
         },
         {
-            "id": 2,
-            "first": "Gary",
-            "last": "Grandlefuss",
-            "role": "Artist",
-            "bio": "Audire feugait ut nam, labore eligendi mel ne, sumo numquam sed eu. Dicant appetere adipiscing ne vel, ad vix torquatos philosophia.",
+            'id': 2,
+            visible: true,
+            'first': 'Gary',
+            'last': 'Goodyear',
+            'role': 'Artist',
+            'bio': 'Audire feugait ut nam, labore eligendi mel ne, sumo numquam sed eu. Dicant appetere adipiscing ne vel, ad vix torquatos philosophia.',
             imageFront: '../assets/images/rotating_card_profile3.png'
         }
     ];

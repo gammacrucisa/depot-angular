@@ -1,4 +1,4 @@
-<section id="staff" class="pt90 pb50 m100center" [@sectionBorder]="state" (click)="changeState()">
+<section id="staff" class="pt90 pb50 m100center" [@sectionBorder]="state">
     <div class="staff">
         <div class="text-center center-title mb50">
             <h2 class="text-capitalize text-center font100">Our Team</h2>
@@ -14,7 +14,7 @@
             
 
         <div class="card-container col-md-4" *ngFor="let person of staff">
-          <div class="card">
+          <div class="card" (click)="flip(person)">
              <div class="front">
                  <div class="cover">
                      <img src="../assets/images/rotating_card_thumb3.png"/>
@@ -28,6 +28,8 @@
                          <p class="profession">{{ person.role }}</p>
 
                          <p class="text-center">"{{ person.bio }}"</p>
+                         
+                         <p><label>name</label> <input [(ngModel)]="person.first" placeholder="name"></p>
                      </div>
 <!--
                      <div class="footer">

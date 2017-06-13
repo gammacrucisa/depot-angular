@@ -68,7 +68,7 @@ input {
 }
 form {}
 app-staff {
-    background-image:url(assets/images/bg1.jpg);
+    background-image: url(assets/images/bg1.jpg);
     background-position: center center;
     background-repeat:  no-repeat;
     background-attachment: fixed;
@@ -102,7 +102,7 @@ body {
     display: inline-block;
     width: 800px;
     height: 100px;
-    background-image: url(assets/images/home-words-short-white-trans-developer.png);
+    background-image:    url(assets/images/home-words-short-white-trans-developer.png);
     background-size:     cover;                      /* <------ */
     background-repeat:   no-repeat;
     background-position: center center;  
