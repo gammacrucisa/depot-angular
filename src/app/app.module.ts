@@ -27,6 +27,8 @@ import { FormDetailComponent }  from './form-detail.component';
 import { EmployeeService }  from './employee.service';
 import { ClientService }  from './client.service';
 import { FormService }  from './form.service';
+import { LandingComponent }  from './landing.component';
+import { AdminComponent }  from './admin.component';
 
 
 
@@ -50,8 +52,16 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
                 component: AppComponent
             },
             {
+                path: 'admin',
+                component: AdminComponent
+            },
+            {
                 path: 'dashboard',
                 component: DashboardComponent
+            },
+            {
+                path: 'landing',
+                component: LandingComponent
             },
             {
                 path: 'employees',
@@ -99,6 +109,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
         EmployeeDetailComponent,
         ClientDetailComponent,
         FormDetailComponent,
+        LandingComponent,
+        AdminComponent,
     ],
     providers: [
         EmployeeService,

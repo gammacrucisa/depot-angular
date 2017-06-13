@@ -35,6 +35,7 @@ import { FormService } from './form.service';
     ) {};
 
     ngOnInit(): void {
+        console.log('hola');
         this.route.params
             .switchMap((params: Params) => this.formService.getForm(+params['id']))
             .subscribe(form => this.form = form);

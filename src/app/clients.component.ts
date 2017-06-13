@@ -84,6 +84,7 @@ export class ClientsComponent implements OnInit {
     constructor(private clientService: ClientService) {};
 
     ngOnInit(): void {
+        console.log('hola');
         this.getClients();
 //        this.getClientsSlowly();
     };

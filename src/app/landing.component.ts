@@ -3,11 +3,11 @@ import { trigger, state, animate, style, keyframes, transition }
     from '@angular/animations';
 
 @Component({
-    selector: 'app-services',
-    templateUrl: './app.services.component.html',
+    selector: 'app-landing',
+    templateUrl: './landing.component.html',
     styleUrls: ['../assets/css/style.css'],
     animations: [
-        trigger('state', [
+        trigger('#', [
             state('start', style({
                 backgroundColor: "rgba(0, 0, 0, 0)",
             })),
@@ -21,31 +21,18 @@ import { trigger, state, animate, style, keyframes, transition }
 })
 
 
-export class ServicesComponent implements OnInit {
+export class LandingComponent implements OnInit {
     state: string = 'start';
 
-    services = [
-        {
-            icon: '../assets/images/ic_equalizer_black_48px.svg',
-            caption: 'Paid Search Marketing'
-        },
-        {
-            icon: '../assets/images/ic_thumb_up_black_48px.svg',
-            caption: 'Facebook & Social Advertising'
-        },
-        {
-            icon: '../assets/images/ic_web_black_48px.svg',
-            caption: 'Web Development'
-        },
-        {
-            icon: '../assets/images/ic_trending_up_black_48px.svg',
-            caption: 'Search Engine Optimization'
-        },
-        {
-            icon: '../assets/images/ic_wc_black_48px.svg',
-            caption: 'Branding & Content Development'
-        },
-    
+    images = [
+      {
+        img: '../assets/images/imac.png',
+        caption: 'KNH Yaki'
+      },
+      {
+        img: '../assets/images/imac2.png',
+        caption: '5000 trillion dollars'
+      }
     ];
 
     ngOnInit() {

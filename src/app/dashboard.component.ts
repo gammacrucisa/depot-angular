@@ -35,6 +35,7 @@ export class DashboardComponent implements OnInit {
     ) {}
 
     ngOnInit(): void {
+        console.log('hola');
         this.employeeService.getEmployees()
             .then(employees => this.employees = employees.slice(0));
         this.clientService.getClients()

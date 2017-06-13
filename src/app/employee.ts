@@ -1,4 +1,4 @@
-export class Employee { //All public data
+export class Employee { // All public data
     id: number;
     nameFirst: string;
     nameLast: string;

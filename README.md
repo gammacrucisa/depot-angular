@@ -1,6 +1,6 @@
 # Nich
 
-Project projected completion June 13, 2017.
+Project projected completion June 15, 2017.
 
 ## Compatibility
 

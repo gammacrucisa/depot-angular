@@ -35,6 +35,7 @@ export class ClientDetailComponent implements OnInit {
     ) {};
 
     ngOnInit(): void {
+        console.log('hola');
         this.route.params
             .switchMap((params: Params) => this.clientService.getClient(+params['id']))
             .subscribe(client => this.client = client);

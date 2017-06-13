@@ -1,27 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import { trigger, state, animate, style, keyframes, transition } 
-    from '@angular/animations';
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-root',
-    templateUrl: './app.component.html',
+    template:
+        `
+            <app-landing></app-landing>
+        `
+    ,
     styleUrls: ['../assets/css/style.css'],
-    animations: [
-        trigger('#', [
-            state('start', style({
-                backgroundColor: "rgba(0, 0, 0, 0)",
-            })),
-            state('finish', style({
-                backgroundColor: "rgba(0, 0, 0, 0.1)",
-            })),
-            transition('start => finish', animate('4000ms ease')),
-            transition('finish => start', animate('4000ms ease')),
-        ])
-    ]
 })
 
 
-export class AppComponent implements OnInit {
+export class AppComponent {
     state: string = 'start';
 
     images = [
@@ -35,13 +25,4 @@ export class AppComponent implements OnInit {
       }
     ];
 
-    ngOnInit() {
-        //setTimeout(() => this.changeState(), 6000);
-        console.log('hola');
-    }
-
-    changeState() {
-        console.log('hellllo');
-        this.state = (this.state === 'start') ? 'finish' : 'start';
-    }
 }
