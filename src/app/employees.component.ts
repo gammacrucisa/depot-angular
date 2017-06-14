@@ -65,12 +65,21 @@ import { EmployeeService } from './employee.service';
     ],
     template:
         `
+            <h1>{{title}}</h1>
+            <nav>
+                <a routerLink="/dashboard">Dashboard</a>
+                <a routerLink="/employees">Employees</a>    
+                <a routerLink="/clients">Clients</a>    
+                <a routerLink="/forms">Forms</a>    
+            </nav>
+            <router-outlet></router-outlet>
+
         <h2>Employees</h2>
         <ul class="employees">
             <li *ngFor="let employee of employees" 
                 [class.selected]="employee === selectedEmployee"
                 (click)="onSelect(employee)">
-                <span class="badge">{{employee.id}}</span> {{employee.name}}
+                <span class="badge">{{employee.id}}</span> {{employee.nameFirst}} {{employee.nameLast}}
             </li>
         </ul>
         <employee-detail [employee]="selectedEmployee"></employee-detail>

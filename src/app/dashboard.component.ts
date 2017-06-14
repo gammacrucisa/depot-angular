@@ -11,11 +11,38 @@ import { FormService } from './form.service';
     selector: 'my-dashboard',
     template:
         `
-            <h3>Top Employee</h3>
+            <h1>{{title}}</h1>
+            <nav>
+                <a routerLink="/dashboard">Dashboard</a>
+                <a routerLink="/employees">Employees</a>    
+                <a routerLink="/clients">Clients</a>    
+                <a routerLink="/forms">Forms</a>    
+            </nav>
+            <router-outlet></router-outlet>
+
+            <h3>Employee</h3>
             <div class="grid grid-pad">
               <div *ngFor="let employee of employees" class="col-1-4">
                 <div class="module employee">
-                  <h4>{{employee.name}}</h4>
+                  <h4>{{employee.nameFirst}}</h4>
+                </div>
+              </div>
+            </div>
+
+            <h3>Clients</h3>
+            <div class="grid grid-pad">
+              <div *ngFor="let client of clients" class="col-1-4">
+                <div class="module employee">
+                  <h4>{{client.company}}</h4>
+                </div>
+              </div>
+            </div>
+
+            <h3>Forms</h3>
+            <div class="grid grid-pad">
+              <div *ngFor="let form of forms" class="col-1-4">
+                <div class="module employee">
+                  <h4>{{form.name}}</h4>
                 </div>
               </div>
             </div>
@@ -37,10 +64,10 @@ export class DashboardComponent implements OnInit {
     ngOnInit(): void {
         console.log('hola');
         this.employeeService.getEmployees()
-            .then(employees => this.employees = employees.slice(0, 1));
+            .then(employees => this.employees = employees.slice(0, 4));
         this.clientService.getClients()
-            .then(clients => this.clients = clients.slice(0, 1));
+            .then(clients => this.clients = clients.slice(0, 4));
         this.formService.getForms()
-            .then(forms => this.forms = forms.slice(0, 1));
+            .then(forms => this.forms = forms.slice(0, 4));
     }
 }

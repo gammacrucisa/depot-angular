@@ -65,6 +65,15 @@ import { FormService } from './form.service';
     ],
     template:
         `
+            <h1>{{title}}</h1>
+            <nav>
+                <a routerLink="/dashboard">Dashboard</a>
+                <a routerLink="/employees">Employees</a>    
+                <a routerLink="/clients">Clients</a>    
+                <a routerLink="/forms">Forms</a>    
+            </nav>
+            <router-outlet></router-outlet>
+
         <h2>Forms</h2>
         <ul class="forms">
             <li *ngFor="let form of forms" 

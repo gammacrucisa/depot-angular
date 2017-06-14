@@ -65,12 +65,21 @@ import { ClientService } from './client.service';
     ],
     template:
         `
+            <h1>{{title}}</h1>
+            <nav>
+                <a routerLink="/dashboard">Dashboard</a>
+                <a routerLink="/employees">Employees</a>    
+                <a routerLink="/clients">Clients</a>    
+                <a routerLink="/forms">Forms</a>    
+            </nav>
+            <router-outlet></router-outlet>
+
         <h2>Clients</h2>
         <ul class="clients">
             <li *ngFor="let client of clients" 
                 [class.selected]="client === selectedClient"
                 (click)="onSelect(client)">
-                <span class="badge">{{client.id}}</span> {{client.name}}
+                <span class="badge">{{client.id}}</span> {{client.company}} ({{client.contact}})
             </li>
         </ul>
         <client-detail [client]="selectedClient"></client-detail>
