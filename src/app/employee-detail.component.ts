@@ -14,11 +14,11 @@ import { EmployeeService } from './employee.service';
     template:
             `
             <div *ngIf="employee">
-                <h2>{{employee.name}} details!</h2>
+                <h2>{{employee.nameFirst}} details!</h2>
                 <div><label>id: </label>{{employee.id}}</div>
                 <div>
                     <label>name: </label>
-                    <input [(ngModel)]="employee.name" placeholder="name"/>
+                    <input [(ngModel)]="employee.nameFirst" placeholder="name"/>
                 </div>
                 <button (click)="goBack()">Back</button>
             </div>

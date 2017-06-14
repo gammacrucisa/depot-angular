@@ -19,6 +19,6 @@ export class EmployeeService {
     getEmployee(id: number): Promise<Employee> {
         return this.getEmployees()
              .then(employees => employees.find(employee => employee.id === id));
-}
+    }
 
 }

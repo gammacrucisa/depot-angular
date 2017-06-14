@@ -37,10 +37,10 @@ export class DashboardComponent implements OnInit {
     ngOnInit(): void {
         console.log('hola');
         this.employeeService.getEmployees()
-            .then(employees => this.employees = employees.slice(0));
+            .then(employees => this.employees = employees.slice(0, 1));
         this.clientService.getClients()
-            .then(clients => this.clients = clients.slice(0));
+            .then(clients => this.clients = clients.slice(0, 1));
         this.formService.getForms()
-            .then(forms => this.forms = forms.slice(0));
+            .then(forms => this.forms = forms.slice(0, 1));
     }
 }

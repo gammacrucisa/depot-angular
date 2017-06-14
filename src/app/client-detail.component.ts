@@ -14,11 +14,11 @@ import { ClientService } from './client.service';
     template:
             `
             <div *ngIf="client">
-                <h2>{{client.name}} details!</h2>
+                <h2>{{client.company}} details!</h2>
                 <div><label>id: </label>{{client.id}}</div>
                 <div>
                     <label>name: </label>
-                    <input [(ngModel)]="client.name" placeholder="name"/>
+                    <input [(ngModel)]="client.company" placeholder="company"/>
                 </div>
                 <button (click)="goBack()">Back</button>
             </div>
