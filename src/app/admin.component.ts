@@ -14,5 +14,5 @@ import { Component } from '@angular/core';
     ,
 })
 export class AdminComponent {
-    title: string = 'Nich';
+    title: string = 'Nich Admin';
 }

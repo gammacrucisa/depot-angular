@@ -4,7 +4,10 @@ import { Component } from '@angular/core';
     selector: 'app-root',
     template:
         `
-            <app-landing></app-landing>
+            <a routerLink=""></a>
+            <a routerLink="admin"></a>
+            <router-outlet></router-outlet>
+            
         `
     ,
     styleUrls: ['../assets/css/style.css'],
@@ -12,17 +15,5 @@ import { Component } from '@angular/core';
 
 
 export class AppComponent {
-    state: string = 'start';
-
-    images = [
-      {
-        img: '../assets/images/imac.png',
-        caption: 'KNH Yaki'
-      },
-      {
-        img: '../assets/images/imac2.png',
-        caption: '5000 trillion dollars'
-      }
-    ];
-
+    title: string = 'Nich';
 }

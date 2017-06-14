@@ -8,7 +8,7 @@ import { trigger, state, style, transition, keyframes, animate }
     templateUrl: './app.staff.component.html',
     styleUrls: ['../assets/css/style.css'],
     animations: [
-        trigger('fadeInOut', [
+        trigger('state', [
             state('fadeOut', style({
                 opacity: 1,
             })),
