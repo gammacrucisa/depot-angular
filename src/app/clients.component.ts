@@ -65,12 +65,14 @@ import { ClientService } from './client.service';
     ],
     template:
         `
-            <h1>{{title}}</h1>
+        <div class="white-bg-full">
+            <h1>Admin</h1>
             <nav>
-                <a routerLink="/dashboard">Dashboard</a>
-                <a routerLink="/employees">Employees</a>    
-                <a routerLink="/clients">Clients</a>    
-                <a routerLink="/forms">Forms</a>    
+                <a routerLink="/">Home</a> | 
+                <a routerLink="/dashboard">Dashboard</a> | 
+                <a routerLink="/employees">Employees</a> |  
+                <a routerLink="/clients">Clients</a> | 
+                <a routerLink="/forms">Forms</a> - more
             </nav>
             <router-outlet></router-outlet>
 
@@ -83,6 +85,7 @@ import { ClientService } from './client.service';
             </li>
         </ul>
         <client-detail [client]="selectedClient"></client-detail>
+        </div>
         `,
     providers: [ ClientService ],
 })
@@ -101,7 +104,7 @@ export class ClientsComponent implements OnInit {
     getClients(): void {
 //      this.empployee = this.clientService.getClients();
         this.clientService.getClients()
-                .then((clients) => { this.clients = clients; });
+                .then((clients) => { this.clients = clients.slice(1); });
     };
 
     onSelect(client: Client): void {

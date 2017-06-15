@@ -11,12 +11,14 @@ import { FormService } from './form.service';
     selector: 'my-dashboard',
     template:
         `
-            <h1>{{title}}</h1>
+            <div class="white-bg-full">
+            <h1>Admin</h1>
             <nav>
-                <a routerLink="/dashboard">Dashboard</a>
-                <a routerLink="/employees">Employees</a>    
-                <a routerLink="/clients">Clients</a>    
-                <a routerLink="/forms">Forms</a>    
+                <a routerLink="/">Home</a> | 
+                <a routerLink="/dashboard">Dashboard</a> | 
+                <a routerLink="/employees">Employees</a> |  
+                <a routerLink="/clients">Clients</a> | 
+                <a routerLink="/forms">Forms</a> - more
             </nav>
             <router-outlet></router-outlet>
 
@@ -46,7 +48,7 @@ import { FormService } from './form.service';
                 </div>
               </div>
             </div>
-            
+            </div>
         `
     ,
 })
@@ -64,10 +66,10 @@ export class DashboardComponent implements OnInit {
     ngOnInit(): void {
         console.log('hola');
         this.employeeService.getEmployees()
-            .then(employees => this.employees = employees.slice(0, 4));
+            .then(employees => this.employees = employees.slice(1, 5));
         this.clientService.getClients()
-            .then(clients => this.clients = clients.slice(0, 4));
+            .then(clients => this.clients = clients.slice(1, 5));
         this.formService.getForms()
-            .then(forms => this.forms = forms.slice(0, 4));
+            .then(forms => this.forms = forms.slice(1, 5));
     }
 }

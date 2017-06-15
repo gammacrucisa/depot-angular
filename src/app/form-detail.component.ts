@@ -14,13 +14,14 @@ import { FormService } from './form.service';
     template:
             `
             <div *ngIf="form">
-                <h2>{{form.name}} details!</h2>
-                <div><label>id: </label>{{form.id}}</div>
+                <h2>{{form.name}}</h2>
+                <div><label>id: </label> {{form.id}}</div>
                 <div>
-                    <label>name: </label>
-                    <input [(ngModel)]="form.name" placeholder="name"/>
+                    <label>Name: </label> <input [(ngModel)]="form.name" placeholder="name"/><br />
+                    <label>Email: </label> <input [(ngModel)]="form.email" placeholder="email"/><br />
+                    <label>Phone: </label> <input [(ngModel)]="form.phone" placeholder="phone"/>
                 </div>
-                <button (click)="goBack()">Back</button>
+                <!--<button (click)="goBack()">Back</button>-->
             </div>
             `
     ,
@@ -45,3 +46,12 @@ import { FormService } from './form.service';
         this.location.back();
     }
 }
+
+
+
+/*
+    id: number;
+    name: string;
+    email: string;
+    phone: string;
+*/

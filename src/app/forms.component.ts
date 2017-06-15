@@ -65,12 +65,14 @@ import { FormService } from './form.service';
     ],
     template:
         `
-            <h1>{{title}}</h1>
+            <div class="white-bg-full">            
+            <h1>Admin</h1>
             <nav>
-                <a routerLink="/dashboard">Dashboard</a>
-                <a routerLink="/employees">Employees</a>    
-                <a routerLink="/clients">Clients</a>    
-                <a routerLink="/forms">Forms</a>    
+                <a routerLink="/">Home</a> | 
+                <a routerLink="/dashboard">Dashboard</a> | 
+                <a routerLink="/employees">Employees</a> |  
+                <a routerLink="/clients">Clients</a> | 
+                <a routerLink="/forms">Forms</a> - more
             </nav>
             <router-outlet></router-outlet>
 
@@ -83,6 +85,7 @@ import { FormService } from './form.service';
             </li>
         </ul>
         <form-detail [form]="selectedForm"></form-detail>
+        </div>
         `,
     providers: [ FormService ],
 })
@@ -100,7 +103,7 @@ export class FormsComponent implements OnInit {
     getForms(): void {
 //      this.empployee = this.formService.getForms();
         this.formService.getForms()
-                .then((forms) => { this.forms = forms; });
+                .then((forms) => { this.forms = forms.slice(1); });
     };
 
     onSelect(form: Form): void {

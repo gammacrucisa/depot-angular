@@ -50,7 +50,7 @@ export class StaffComponent {
             'first': 'Steve',
             'last': 'Stuvy',
             'role': 'Developer',
-            'bio': 'Has equidem splendide at, id cum copiosae prodesset. Animal inermis oportere no vim, at perpetua voluptatum dissentias sea. Putent omittantur instructior ad cum.',
+            'bio': 'Has equidem splendide at, id cum copiosae prodesset. Animal inermis oportere no vim, at perpetua voluptatum dissentias sea.',
             imageFront: '../assets/images/rotating_card_profile2.png'
         },
         {

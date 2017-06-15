@@ -65,12 +65,14 @@ import { EmployeeService } from './employee.service';
     ],
     template:
         `
-            <h1>{{title}}</h1>
+            <div class="white-bg-full">
+            <h1>Admin</h1>
             <nav>
-                <a routerLink="/dashboard">Dashboard</a>
-                <a routerLink="/employees">Employees</a>    
-                <a routerLink="/clients">Clients</a>    
-                <a routerLink="/forms">Forms</a>    
+                <a routerLink="/">Home</a> | 
+                <a routerLink="/dashboard">Dashboard</a> | 
+                <a routerLink="/employees">Employees</a> |  
+                <a routerLink="/clients">Clients</a> | 
+                <a routerLink="/forms">Forms</a> - more
             </nav>
             <router-outlet></router-outlet>
 
@@ -79,10 +81,11 @@ import { EmployeeService } from './employee.service';
             <li *ngFor="let employee of employees" 
                 [class.selected]="employee === selectedEmployee"
                 (click)="onSelect(employee)">
-                <span class="badge">{{employee.id}}</span> {{employee.nameFirst}} {{employee.nameLast}}
+                <span class="badge"> {{employee.id}}</span> {{employee.nameFirst}} {{employee.nameLast}}
             </li>
         </ul>
         <employee-detail [employee]="selectedEmployee"></employee-detail>
+        </div>
         `,
     providers: [ EmployeeService ],
 })
@@ -101,10 +104,27 @@ export class EmployeesComponent implements OnInit {
     getEmployees(): void {
 //      this.empployee = this.employeeService.getEmployees();
         this.employeeService.getEmployees()
-                .then((employees) => { this.employees = employees; });
+                .then((employees) => { this.employees = employees.slice(1); });
     };
 
     onSelect(employee: Employee): void {
         this.selectedEmployee = employee;
     };
 };
+
+
+/*
+export class Employee { // All public data
+    id: number;
+    nameFirst: string;
+    nameLast: string;
+    role: string;
+    bio: string;
+    email: string;
+    phone: string;
+    twitter: string;
+    facebook: string;
+    instagram: string;
+}
+*/
+
