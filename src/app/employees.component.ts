@@ -74,9 +74,8 @@ import { EmployeeService } from './employee.service';
                 <a routerLink="/clients">Clients</a> | 
                 <a routerLink="/forms">Forms</a> | more
             </nav>
-            <router-outlet></router-outlet>
 
-        <h2>Employees</h2>
+        <!--<h2>Employees</h2>-->
         <ul class="employees">
             <li *ngFor="let employee of employees" 
                 [class.selected]="employee === selectedEmployee"

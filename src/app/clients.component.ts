@@ -76,7 +76,7 @@ import { ClientService } from './client.service';
             </nav>
             <router-outlet></router-outlet>
 
-        <h2>Clients</h2>
+        <!--<h2>Clients</h2>-->
         <ul class="clients">
             <li *ngFor="let client of clients" 
                 [class.selected]="client === selectedClient"

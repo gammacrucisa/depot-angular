@@ -76,7 +76,7 @@ import { FormService } from './form.service';
             </nav>
             <router-outlet></router-outlet>
 
-        <h2>Forms</h2>
+        <!--<h2>Forms</h2>-->
         <ul class="forms">
             <li *ngFor="let form of forms" 
                 [class.selected]="form === selectedForm"

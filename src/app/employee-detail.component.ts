@@ -14,14 +14,7 @@ import { EmployeeService } from './employee.service';
     template:
             `
             <div class="white-bg-full">
-            <h1>{{title}}</h1>
-            <nav class="admin-nav">
-                <a routerLink="/">Home</a> | 
-                <a routerLink="/dashboard">Dashboard</a> | 
-                <a routerLink="/employees">Employees</a> |  
-                <a routerLink="/clients">Clients</a> | 
-                <a routerLink="/forms">Forms</a> | more
-            </nav>
+
 
             <div *ngIf="employee">
                 <h2>{{employee.nameFirst}} {{employee.nameLast}}</h2>
