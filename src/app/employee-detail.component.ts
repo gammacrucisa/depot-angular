@@ -13,6 +13,16 @@ import { EmployeeService } from './employee.service';
     selector: 'employee-detail',
     template:
             `
+            <div class="white-bg-full">
+            <h1>{{title}}</h1>
+            <nav class="admin-nav">
+                <a routerLink="/">Home</a> | 
+                <a routerLink="/dashboard">Dashboard</a> | 
+                <a routerLink="/employees">Employees</a> |  
+                <a routerLink="/clients">Clients</a> | 
+                <a routerLink="/forms">Forms</a> | more
+            </nav>
+
             <div *ngIf="employee">
                 <h2>{{employee.nameFirst}} {{employee.nameLast}}</h2>
                 <div><label>id: </label> {{employee.id}}</div>
@@ -29,10 +39,12 @@ import { EmployeeService } from './employee.service';
                 </div>
                 <button (click)="goBack()">Back</button>
             </div>
+            </div>
             `
     ,
 })
 export class EmployeeDetailComponent implements OnInit {
+    title: string = 'Employees';
     @Input() employee: Employee;
 
     constructor(

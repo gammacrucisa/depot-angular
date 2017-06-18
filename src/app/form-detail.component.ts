@@ -13,6 +13,16 @@ import { FormService } from './form.service';
     selector: 'form-detail',
     template:
             `
+            <div class="white-bg-full">
+            <h1>{{title}}</h1>
+            <nav class="admin-nav">
+                <a routerLink="/">Home</a> | 
+                <a routerLink="/dashboard">Dashboard</a> | 
+                <a routerLink="/employees">Employees</a> |  
+                <a routerLink="/clients">Clients</a> | 
+                <a routerLink="/forms">Forms</a> | more
+            </nav>
+
             <div *ngIf="form">
                 <h2>{{form.name}}</h2>
                 <div><label>id: </label> {{form.id}}</div>
@@ -21,12 +31,14 @@ import { FormService } from './form.service';
                     <label>Email: </label> <input [(ngModel)]="form.email" placeholder="email"/><br />
                     <label>Phone: </label> <input [(ngModel)]="form.phone" placeholder="phone"/>
                 </div>
-                <!--<button (click)="goBack()">Back</button>-->
+                <button (click)="goBack()">Back</button>
+            </div>
             </div>
             `
     ,
 })
     export class FormDetailComponent implements OnInit {
+    title: string = 'Forms';
     @Input() form: Form;
 
     constructor(

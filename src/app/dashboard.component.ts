@@ -33,20 +33,20 @@ import { FormService } from './form.service';
 
             <h3>Clients</h3>
             <div class="grid grid-pad">
-              <div *ngFor="let client of clients" class="col-1-4">
+              <a *ngFor="let client of clients" class="col-1-4" [routerLink]="['/clientdetail', client.id]">
                 <div class="module employee">
                   <h4>{{client.company}}</h4>
                 </div>
-              </div>
+              </a>
             </div>
 
             <h3>Forms</h3>
             <div class="grid grid-pad">
-              <div *ngFor="let form of forms" class="col-1-4">
+              <a *ngFor="let form of forms" class="col-1-4" [routerLink]="['/formdetail', form.id]">
                 <div class="module employee">
                   <h4>{{form.name}}</h4>
                 </div>
-              </div>
+              </a>
             </div>
             
             </div>

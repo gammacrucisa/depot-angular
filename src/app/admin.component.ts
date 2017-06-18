@@ -4,7 +4,8 @@ import { Component } from '@angular/core';
     selector: 'my-admin',
     template:
          
-        `            
+        `
+
             <h1>{{title}}</h1>
             <nav class="admin-nav">
                 <a routerLink="/">Home</a> | 
@@ -14,6 +15,7 @@ import { Component } from '@angular/core';
                 <a routerLink="/forms">Forms</a> | more
             </nav>
             <router-outlet></router-outlet>
+
         `
 
         

@@ -13,6 +13,17 @@ import { ClientService } from './client.service';
     selector: 'client-detail',
     template:
             `
+
+            <div class="white-bg-full">
+            <h1>{{title}}</h1>
+            <nav class="admin-nav">
+                <a routerLink="/">Home</a> | 
+                <a routerLink="/dashboard">Dashboard</a> | 
+                <a routerLink="/employees">Employees</a> |  
+                <a routerLink="/clients">Clients</a> | 
+                <a routerLink="/forms">Forms</a> | more
+            </nav>
+
             <div *ngIf="client">
                 <h2>{{client.company}}</h2>
                 <div><label>id: </label> {{client.id}}</div>
@@ -36,12 +47,14 @@ import { ClientService } from './client.service';
                     <label>Logo White: </label> <input [(ngModel)]="client.logoWhite" placeholder="logoWhite"/><br />
                     <label>Logo Black: </label> <input [(ngModel)]="client.logoBlack" placeholder="logoBlack"/>
                 </div>
-                <!--<button (click)="goBack()">Back</button>-->
+                <button (click)="goBack()">Back</button>
+            </div>
             </div>
             `
     ,
 })
 export class ClientDetailComponent implements OnInit {
+    title: string = 'Clients';
     @Input() client: Client;
 
     constructor(
