@@ -12,23 +12,23 @@ import { FormService } from './form.service';
     template:
         `
             <div class="white-bg-full">
-            <h1>Admin</h1>
-            <nav>
+            <h1>{{title}}</h1>
+            <nav class="admin-nav">
                 <a routerLink="/">Home</a> | 
                 <a routerLink="/dashboard">Dashboard</a> | 
                 <a routerLink="/employees">Employees</a> |  
                 <a routerLink="/clients">Clients</a> | 
-                <a routerLink="/forms">Forms</a> - more
+                <a routerLink="/forms">Forms</a> | more
             </nav>
             <router-outlet></router-outlet>
 
-            <h3>Employee</h3>
+            <h3>Employees</h3>
             <div class="grid grid-pad">
-              <div *ngFor="let employee of employees" class="col-1-4">
+              <a *ngFor="let employee of employees" class="col-1-4" [routerLink]="['/employeedetail', employee.id]">
                 <div class="module employee">
                   <h4>{{employee.nameFirst}}</h4>
                 </div>
-              </div>
+              </a>
             </div>
 
             <h3>Clients</h3>
@@ -48,11 +48,13 @@ import { FormService } from './form.service';
                 </div>
               </div>
             </div>
+            
             </div>
         `
     ,
 })
 export class DashboardComponent implements OnInit {
+    title: string = 'Dashboard';
     employees: Employee[];
     clients: Client[];
     forms: Form[];

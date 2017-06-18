@@ -26,7 +26,6 @@ import { trigger, state, style, transition, keyframes, animate }
 
 
 export class StaffComponent {
-    
     state: string = 'none';
 
     flip() {

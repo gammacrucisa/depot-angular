@@ -19,6 +19,5 @@ export class ClientService {
     getClient(id: number): Promise<Client> {
         return this.getClients()
              .then(clients => clients.find(client => client.id === id));
-}
-
+    }
 }

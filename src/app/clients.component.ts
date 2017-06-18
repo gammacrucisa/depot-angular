@@ -66,13 +66,13 @@ import { ClientService } from './client.service';
     template:
         `
         <div class="white-bg-full">
-            <h1>Admin</h1>
-            <nav>
+            <h1>{{title}}</h1>
+            <nav class="admin-nav">
                 <a routerLink="/">Home</a> | 
                 <a routerLink="/dashboard">Dashboard</a> | 
                 <a routerLink="/employees">Employees</a> |  
                 <a routerLink="/clients">Clients</a> | 
-                <a routerLink="/forms">Forms</a> - more
+                <a routerLink="/forms">Forms</a> | more
             </nav>
             <router-outlet></router-outlet>
 
@@ -90,6 +90,7 @@ import { ClientService } from './client.service';
     providers: [ ClientService ],
 })
 export class ClientsComponent implements OnInit {
+    title: string = 'Clients';
     clients: Client[];
     selectedClient: Client;
 

@@ -30,6 +30,8 @@ import { FormService }  from './form.service';
 import { LandingComponent }  from './landing.component';
 import { AdminComponent }  from './admin.component';
 
+import { AppRoutingModule }  from './app-routing.module';
+
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
@@ -39,56 +41,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
         HttpModule,
         NgbModule.forRoot(),
         BrowserAnimationsModule,
-        RouterModule.forRoot([
-/*            {
-                path: '',
-                redirectTo: 'dashboard',
-                pathMatch: 'full'
-            },*/
-            {
-                path: '',
-                component: LandingComponent,
-            },
-            {
-                path: 'admin',
-                component: AdminComponent,
-                pathMatch: 'full',
-            },
-            {
-                path: 'dashboard',
-                component: DashboardComponent,
-                pathMatch: 'full',
-            },
-            {
-                path: 'landing',
-                component: LandingComponent
-            },
-            {
-                path: 'employees',
-                component: EmployeesComponent
-            },
-            {
-                path: 'clients',
-                component: ClientsComponent
-            },            
-            {
-                path: 'forms',
-                component: FormsComponent
-            },
-            {
-                path: 'employeedetail/:id',
-                component: EmployeeDetailComponent
-            },
-            {
-                path: 'clientdetail/:id',
-                component: ClientDetailComponent
-            },
-            {
-                path: 'formdetail/:id',
-                component: FormDetailComponent
-            },
-//            { path: '**', component: PageNotFoundComponent }
-        ]),
+        AppRoutingModule,
     ],
     declarations: [
         AppComponent,

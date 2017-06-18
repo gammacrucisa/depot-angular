@@ -3,7 +3,7 @@ import { trigger, state, animate, style, keyframes, transition }
     from '@angular/animations';
 
 @Component({
-    selector: 'app-landing',
+    selector: 'landing',
     templateUrl: './landing.component.html',
     styleUrls: ['../assets/css/style.css'],
     animations: [

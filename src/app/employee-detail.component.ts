@@ -27,7 +27,7 @@ import { EmployeeService } from './employee.service';
                     <label>Facebook: </label> <input [(ngModel)]="employee.facebook" placeholder="facebook"/><br />
                     <label>Instagram: </label> <input [(ngModel)]="employee.instagram" placeholder="instagram"/>
                 </div>
-                <!--<button (click)="goBack()">Back</button>-->
+                <button (click)="goBack()">Back</button>
             </div>
             `
     ,
